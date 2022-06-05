@@ -22,4 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Mobile app api
 Route::post('/v1/auth/login', [App\Http\Controllers\API\AuthController::class, 'login']);
 Route::post('/v1/auth/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
-Route::get('/v1/user', [App\Http\Controllers\API\AuthController::class, 'userData']);
+Route::post('/v1/register', [App\Http\Controllers\API\AuthController::class, 'registration']);
+Route::get('/v1/request/otp', [App\Http\Controllers\API\AuthController::class, 'getOTP']);
+Route::get('/v1/verify/{otp}', [App\Http\Controllers\API\AuthController::class, 'verifyAccount']);
+Route::get('/v1/user', [App\Http\Controllers\API\AuthController::class, 'userData'])->middleware(['auth', 'is_verify_email']);
