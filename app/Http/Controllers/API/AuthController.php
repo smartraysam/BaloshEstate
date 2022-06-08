@@ -5,20 +5,29 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Models\User;
 use App\Models\UserVerify;
+use App\Helpers\HelperClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-use Mail;
+
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends BaseController
 {
 
     public function registration(Request $request)
     {
-        $request->validate([
+     
+        $rules=array(
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
-        ]);
+        );
+        $validator=Validator::make($request->all(),$rules);
+        if($validator->fails())
+        {
+            return $this->sendError('Unauthorised.', ['error' =>  $validator->errors()]);
+        }
 
         $data = $request->all();
         $createUser = $this->create($data);
@@ -29,10 +38,9 @@ class AuthController extends BaseController
             'otp' => $otp,
         ]);
 
-        Mail::send('email.emailVerificationEmail', ['otp' => $otp], function ($message) use ($request) {
-            $message->to($request->email);
-            $message->subject('Email Verification Mail');
-        });
+        $help = new HelperClass();
+        $datas = ['otp'=>$otp];
+        $help->sendwithPHPMailer($request->email,'Email Verification',0,$datas);
         // send otp to whatapp or number
         $success['otp'] = $otp;
         $messages = "Registration successful, OTP sent to email for verification";
@@ -41,9 +49,14 @@ class AuthController extends BaseController
 
     public function getOTP(Request $request)
     {
-        $request->validate([
-            'email' => 'required|email|unique:users',
-        ]);
+        $rules=array(
+            'email' => 'required|email'
+        );
+        $validator=Validator::make($request->all(),$rules);
+        if($validator->fails())
+        {
+            return $this->sendError('Unauthorised.', ['error' =>  $validator->errors()]);
+        }
 
         $user = User::where('email', $request->email)->first();
 
@@ -59,10 +72,9 @@ class AuthController extends BaseController
                     'otp' => $otp,
                 ]);
             }
-            Mail::send('email.emailVerificationEmail', ['otp' => $otp], function ($message) use ($request) {
-                $message->to($request->email);
-                $message->subject('Email Verification Mail');
-            });
+            $help = new HelperClass();
+            $data = ['otp'=>$otp];
+            $help->sendwithPHPMailer($request->email,'OTP RequestP',1,$data);
             // send otp to whatapp or number
             $success['otp'] = $otp;
             $messages = "New OTP sent to email";
@@ -135,7 +147,62 @@ class AuthController extends BaseController
     {
         return User::create([
             'email' => $data['email'],
+            'role'=>2,
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function updateEmail(Request $request)
+    {
+        $user = User::where('access_token', $request->access_token)->first();
+        if ($user) {
+            $user->email = $request->email;
+            $user->update();
+            $alert = "Email Address Updated";
+            $success['alert'] = $alert;
+            return $this->sendResponse($success, 'success');
+        } else {
+            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
+        }
+
+    }
+    public function updatePhone(Request $request)
+    {
+        $user = User::where('access_token', $request->access_token)->first();
+
+        if ($user) {
+            $userdata = $user->estateuser;
+            $userdata->phonenumber = $request->phone_number;
+            $userdata->update();
+            $alert = "Phone Number Updated";
+            $success['alert'] = $alert;
+            return $this->sendResponse($success, 'success');
+        } else {
+            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
+        }
+
+    }
+    public function updatePassword(Request $request)
+    {
+        $user = User::where('access_token', $request->access_token)->first();
+        if ($user) {
+            $oldpass = $request->old_password;
+            $newpass = $request->new_password;
+            $oldpassword = Hash::make($oldpass);
+            if ($oldpassword == $user->password) {
+                $user->password = Hash::make($newpass);
+                $user->update();
+                $alert = "Password changed successfully";
+                $success['alert'] = $alert;
+                return $this->sendResponse($success, 'success');
+
+            }
+            return $this->sendError('Error.', ['error' => 'Old Password not correct']);
+
+        } else {
+            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
+        }
+
+    }
+
 }

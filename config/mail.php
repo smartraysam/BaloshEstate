@@ -43,6 +43,9 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'auth_mode' => null,
+            'email_host'=>env('EMAIL_HOST'),
+            'email_username'=>env('EMAIL_USERNAME'),
+            'email_password'=>env('EMAIL_PASSWORD'),
         ],
 
         'ses' => [

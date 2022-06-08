@@ -681,60 +681,6 @@ class MobileController extends BaseController
         }
 
     }
-
-    public function updateEmail(Request $request)
-    {
-        $user = User::where('access_token', $request->access_token)->first();
-        if ($user) {
-            $user->email = $request->email;
-            $user->update();
-            $alert = "Email Address Updated";
-            $success['alert'] = $alert;
-            return $this->sendResponse($success, 'success');
-        } else {
-            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
-        }
-
-    }
-    public function updatePhone(Request $request)
-    {
-        $user = User::where('access_token', $request->access_token)->first();
-
-        if ($user) {
-            $userdata = $user->estateuser;
-            $userdata->phonenumber = $request->phone_number;
-            $userdata->update();
-            $alert = "Phone Number Updated";
-            $success['alert'] = $alert;
-            return $this->sendResponse($success, 'success');
-        } else {
-            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
-        }
-
-    }
-    public function updatePassword(Request $request)
-    {
-        $user = User::where('access_token', $request->access_token)->first();
-        if ($user) {
-            $oldpass = $request->old_password;
-            $newpass = $request->new_password;
-            $oldpassword = Hash::make($oldpass);
-            if ($oldpassword == $user->password) {
-                $user->password = Hash::make($newpass);
-                $user->update();
-                $alert = "Password changed successfully";
-                $success['alert'] = $alert;
-                return $this->sendResponse($success, 'success');
-
-            }
-            return $this->sendError('Error.', ['error' => 'Old Password not correct']);
-
-        } else {
-            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
-        }
-
-    }
-
     public function RequestDetails(Request $request)
     {
         $user = User::where('access_token', $request->access_token)->first();
