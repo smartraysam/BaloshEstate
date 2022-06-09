@@ -37,8 +37,11 @@ Route::post('/v1/create/access', [App\Http\Controllers\API\AccessController::cla
 Route::post('/v1/auth/access', [App\Http\Controllers\API\AccessController::class, 'AuthAccess']);
 Route::post('/v1/update/access', [App\Http\Controllers\API\AccessController::class, 'UpdateeAccess']);
 
-
-
+//Request and complains
+Route::post('/v1/create/request', [App\Http\Controllers\API\RequestController::class, 'CreateRequest']);
+Route::get('/v1/get/request', [App\Http\Controllers\API\RequestController::class, 'GetRequest']);
+Route::get('/v1/request/details', [App\Http\Controllers\API\RequestController::class, 'RequestDetails']);
+Route::get('/v1/request/category', [App\Http\Controllers\API\RequestController::class, 'LoadCategory']);
 
 
 Route::get('/v1/vend/history', [App\Http\Controllers\API\MobileController::class, 'vendHistory']);
