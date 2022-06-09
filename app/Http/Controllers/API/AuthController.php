@@ -39,10 +39,11 @@ class AuthController extends BaseController
         ]);
 
         $help = new HelperClass();
-        $datas = ['otp'=>$otp];
+        $datas = ['otp'=>$otp, 'timeout'=>60];
         $help->sendwithPHPMailer($request->email,'Email Verification',0,$datas);
         // send otp to whatapp or number
         $success['otp'] = $otp;
+        $success['timeout'] = "60 seconds";
         $messages = "Registration successful, OTP sent to email for verification";
         return $this->sendResponse($success, $messages);
     }
@@ -62,7 +63,7 @@ class AuthController extends BaseController
 
         if ($user) {
             $otp = random_int(1000, 9999);
-            $userotp= UserVerify::where('user_id',$user->id)->fist();
+            $userotp= UserVerify::where('user_id',$user->id)->first();
             if($userotp){
                 $userotp->otp= $otp;
                 $userotp->update();
@@ -73,10 +74,11 @@ class AuthController extends BaseController
                 ]);
             }
             $help = new HelperClass();
-            $data = ['otp'=>$otp];
-            $help->sendwithPHPMailer($request->email,'OTP RequestP',1,$data);
+            $datas = ['otp'=>$otp, 'timeout'=>60];
+            $help->sendwithPHPMailer($request->email,'OTP RequestP',1,$datas);
             // send otp to whatapp or number
             $success['otp'] = $otp;
+            $success['timeout'] = "60 seconds";
             $messages = "New OTP sent to email";
             return $this->sendResponse($success, $messages);
         }
@@ -91,7 +93,7 @@ class AuthController extends BaseController
             if ($user->is_email_verified == false) {
                 return $this->sendError('Unauthorised.', ['error' => 'Account not yet verified']);
             }
-            if ($user->role == 2) {
+            if ($user->role == 1) {
                 $user->access_token = Str::uuid();
                 $user->update();
                 $success['access_token'] = $user->access_token;
@@ -115,6 +117,9 @@ class AuthController extends BaseController
     public function userData(Request $request)
     {
         $user = User::where('access_token', $request->access_token)->first();
+        if ($user->is_email_verified == false) {
+            return $this->sendError('Unauthorised.', ['error' => 'Account not yet verified']);
+        }
         if ($user) {
             $success['user'] = $user;
             return $this->sendResponse($success, 'User data retrived.');
@@ -123,9 +128,9 @@ class AuthController extends BaseController
         }
     }
 
-    public function verifyAccount($otp)
+    public function verifyAccount(Request $request)
     {
-        $verifyUser = UserVerify::where('otp', $otp)->first();
+        $verifyUser = UserVerify::where('otp', $request->otp)->first();
         $message = 'Invalid otp';
 
         if (!is_null($verifyUser)) {
@@ -147,7 +152,7 @@ class AuthController extends BaseController
     {
         return User::create([
             'email' => $data['email'],
-            'role'=>2,
+            'role'=>1,
             'password' => Hash::make($data['password']),
         ]);
     }

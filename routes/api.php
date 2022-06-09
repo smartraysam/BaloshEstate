@@ -24,7 +24,7 @@ Route::post('/v1/auth/login', [App\Http\Controllers\API\AuthController::class, '
 Route::post('/v1/auth/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
 Route::post('/v1/auth/register', [App\Http\Controllers\API\AuthController::class, 'registration']);
 Route::get('/v1/auth/request/otp', [App\Http\Controllers\API\AuthController::class, 'getOTP']);
-Route::get('/v1/auth/verify/{otp}', [App\Http\Controllers\API\AuthController::class, 'verifyAccount']);
+Route::post('/v1/auth/verify', [App\Http\Controllers\API\AuthController::class, 'verifyAccount']);
 Route::get('/v1/user', [App\Http\Controllers\API\AuthController::class, 'userData'])->middleware(['auth', 'is_verify_email']);
 
 
