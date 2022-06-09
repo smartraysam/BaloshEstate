@@ -15,6 +15,7 @@ class CreateReqCategoriesTable extends Migration
     {
         Schema::create('req_categories', function (Blueprint $table) {
             $table->id();
+            $table->integer('pointer')->nullable();
             $table->string('name', 100)->nullable()->default('text');
             $table->timestamps();
         });

@@ -20,7 +20,7 @@ class CreateRequestComplainsTable extends Migration
             $table->string('subject')->nullable();
             $table->longText('request')->nullable();
             $table->tinyInteger('status')->default(0)->comment('0:pending, 1: processing, 2: resolved');
-            $table->tinyInteger('category')->default(0)->comment('0:Access,1:Profile,2:Clearance,3:Technician/contractors; 4:Work permit, 5:Payment, 5:Others');
+            $table->tinyInteger('category')->default(0)->comment('1:Access,2:Payment;3:Profile,4:Clearance,5:Technician/contractors; 6:Work permit, 7:Others');
             $table->boolean('isread')->default(0)->comment('0: unread, 1: read');
             $table->string('attachfile')->nullable()->default('none');
             $table->timestamps();
