@@ -2,31 +2,29 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Helpers\HelperClass;
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Models\User;
 use App\Models\UserVerify;
-use App\Helpers\HelperClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
-
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class AuthController extends BaseController
 {
 
     public function registration(Request $request)
     {
-     
-        $rules=array(
+
+        $rules = array(
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         );
-        $validator=Validator::make($request->all(),$rules);
-        if($validator->fails())
-        {
-            return $this->sendError('Unauthorised.', ['error' =>  $validator->errors()]);
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return $this->sendError('Unauthorised.', ['error' => $validator->errors()]);
         }
 
         $data = $request->all();
@@ -39,48 +37,49 @@ class AuthController extends BaseController
         ]);
 
         $help = new HelperClass();
-        $datas = ['otp'=>$otp];
-        $help->sendwithPHPMailer($request->email,'Email Verification',0,$datas);
+        $datas = ['otp' => $otp, 'timeout' => 60];
+        $help->sendwithPHPMailer($request->email, 'Email Verification', 0, $datas);
         // send otp to whatapp or number
         $success['otp'] = $otp;
+        $success['timeout'] = "60 seconds";
         $messages = "Registration successful, OTP sent to email for verification";
         return $this->sendResponse($success, $messages);
     }
 
     public function getOTP(Request $request)
     {
-        $rules=array(
-            'email' => 'required|email'
+        $rules = array(
+            'email' => 'required|email',
         );
-        $validator=Validator::make($request->all(),$rules);
-        if($validator->fails())
-        {
-            return $this->sendError('Unauthorised.', ['error' =>  $validator->errors()]);
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return $this->sendError('Unauthorised.', ['error' => $validator->errors()]);
         }
 
         $user = User::where('email', $request->email)->first();
 
         if ($user) {
             $otp = random_int(1000, 9999);
-            $userotp= UserVerify::where('user_id',$user->id)->fist();
-            if($userotp){
-                $userotp->otp= $otp;
+            $userotp = UserVerify::where('user_id', $user->id)->first();
+            if ($userotp) {
+                $userotp->otp = $otp;
                 $userotp->update();
-            }else{                
+            } else {
                 UserVerify::create([
                     'user_id' => $createUser->id,
                     'otp' => $otp,
                 ]);
             }
             $help = new HelperClass();
-            $data = ['otp'=>$otp];
-            $help->sendwithPHPMailer($request->email,'OTP RequestP',1,$data);
+            $datas = ['otp' => $otp, 'timeout' => 60];
+            $help->sendwithPHPMailer($request->email, 'OTP RequestP', 1, $datas);
             // send otp to whatapp or number
             $success['otp'] = $otp;
+            $success['timeout'] = "60 seconds";
             $messages = "New OTP sent to email";
             return $this->sendResponse($success, $messages);
         }
-        
+
         return $this->sendError('Unauthorised.', ['error' => 'Email does not exist']);
     }
     public function login(Request $request)
@@ -91,7 +90,7 @@ class AuthController extends BaseController
             if ($user->is_email_verified == false) {
                 return $this->sendError('Unauthorised.', ['error' => 'Account not yet verified']);
             }
-            if ($user->role == 2) {
+            if ($user->role == 1) {
                 $user->access_token = Str::uuid();
                 $user->update();
                 $success['access_token'] = $user->access_token;
@@ -115,6 +114,9 @@ class AuthController extends BaseController
     public function userData(Request $request)
     {
         $user = User::where('access_token', $request->access_token)->first();
+        if ($user->is_email_verified == false) {
+            return $this->sendError('Unauthorised.', ['error' => 'Account not yet verified']);
+        }
         if ($user) {
             $success['user'] = $user;
             return $this->sendResponse($success, 'User data retrived.');
@@ -123,9 +125,9 @@ class AuthController extends BaseController
         }
     }
 
-    public function verifyAccount($otp)
+    public function verifyAccount(Request $request)
     {
-        $verifyUser = UserVerify::where('otp', $otp)->first();
+        $verifyUser = UserVerify::where('otp', $request->otp)->first();
         $message = 'Invalid otp';
 
         if (!is_null($verifyUser)) {
@@ -147,7 +149,7 @@ class AuthController extends BaseController
     {
         return User::create([
             'email' => $data['email'],
-            'role'=>2,
+            'role' => 1,
             'password' => Hash::make($data['password']),
         ]);
     }
