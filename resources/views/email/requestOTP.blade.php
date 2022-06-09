@@ -1,3 +1,3 @@
 <h1>OTP Request</h1>
   
-<p>Here is the verification OTP : <b>{{$data}}</b> </p>
+<p>Here is the verification OTP : <b>{{$otp}}</b> </p>
