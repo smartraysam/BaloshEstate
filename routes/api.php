@@ -43,7 +43,7 @@ Route::get('/v1/get/request', [App\Http\Controllers\API\RequestController::class
 Route::get('/v1/request/details', [App\Http\Controllers\API\RequestController::class, 'RequestDetails']);
 Route::get('/v1/request/category', [App\Http\Controllers\API\RequestController::class, 'LoadCategory']);
 
-
+//Messaging
 Route::get('/v1/vend/history', [App\Http\Controllers\API\MobileController::class, 'vendHistory']);
 Route::get('/v1/vending/details', [App\Http\Controllers\API\MobileController::class, 'VendingDetails']);
 Route::get('/v1/pay/history', [App\Http\Controllers\API\MobileController::class, 'payHistory']);
@@ -51,11 +51,6 @@ Route::get('/v1/pay/history', [App\Http\Controllers\API\MobileController::class,
 
 Route::get('/v1/transaction', [App\Http\Controllers\API\MobileController::class, 'Transactions']);
 Route::get('/v1/notification', [App\Http\Controllers\API\MobileController::class, 'Notification']);
-
-
-Route::post('/v1/submit/request', [App\Http\Controllers\API\MobileController::class, 'SubmitRequest']);
-Route::get('/v1/get/request', [App\Http\Controllers\API\MobileController::class, 'GetRequest']);
-Route::get('/v1/request/details', [App\Http\Controllers\API\MobileController::class, 'RequestDetails']);
 
 
 Route::post('/v1/emergency/alert', [App\Http\Controllers\API\MobileController::class, 'emergencyAlert']);
