@@ -33,11 +33,10 @@ class AccessController extends BaseController
                 if ($date2->gt($date1)) {
                     $value->status = 3;
                 }
-
             }
-            $success['visitData'] = $visits;
-            $success['tVisitor'] = $todaysVisit;
-            $success['allVisitor'] = $allVisitor;
+            $success['access'] = $visits;
+            $success['today_access_cnt'] = $todaysVisit;
+            $success['query_access_cnt'] = $allVisitor;
             return $this->sendResponse($success, 'success');
         } else {
             return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);

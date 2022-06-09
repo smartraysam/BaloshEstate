@@ -38,7 +38,7 @@ class AuthController extends BaseController
 
         $help = new HelperClass();
         $datas = ['otp' => $otp, 'timeout' => 60];
-        $help->sendwithPHPMailer($request->email, 'Email Verification', 0, $datas);
+        $help->PHPMailerNotify($request->email, 'Email Verification', 0, $datas);
         // send otp to whatapp or number
         $success['otp'] = $otp;
         $success['timeout'] = "60 seconds";
@@ -72,7 +72,7 @@ class AuthController extends BaseController
             }
             $help = new HelperClass();
             $datas = ['otp' => $otp, 'timeout' => 60];
-            $help->sendwithPHPMailer($request->email, 'OTP RequestP', 1, $datas);
+            $help->PHPMailerNotify($request->email, 'OTP RequestP', 1, $datas);
             // send otp to whatapp or number
             $success['otp'] = $otp;
             $success['timeout'] = "60 seconds";
