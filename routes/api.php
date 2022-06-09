@@ -20,17 +20,26 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 //Mobile app api
+//User Reg an Auth
 Route::post('/v1/auth/login', [App\Http\Controllers\API\AuthController::class, 'login']);
 Route::post('/v1/auth/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
 Route::post('/v1/auth/register', [App\Http\Controllers\API\AuthController::class, 'registration']);
 Route::get('/v1/auth/request/otp', [App\Http\Controllers\API\AuthController::class, 'getOTP']);
 Route::post('/v1/auth/verify', [App\Http\Controllers\API\AuthController::class, 'verifyAccount']);
-Route::get('/v1/user', [App\Http\Controllers\API\AuthController::class, 'userData'])->middleware(['auth', 'is_verify_email']);
-
-
+Route::get('/v1/user', [App\Http\Controllers\API\AuthController::class, 'userData']);
 Route::post('/v1/update/password', [App\Http\Controllers\API\AuthController::class, 'updatePassword']);
 Route::post('/v1/update/phonenumber', [App\Http\Controllers\API\AuthController::class, 'updatePhone']);
 Route::post('/v1/update/email', [App\Http\Controllers\API\AuthController::class, 'updateEmail']);
+
+//Access control 
+Route::get('/v1/get/access', [App\Http\Controllers\API\AccessController::class, 'GetAccess']);
+Route::post('/v1/create/access', [App\Http\Controllers\API\AccessController::class, 'CreateAccess']);
+Route::post('/v1/auth/access', [App\Http\Controllers\API\AccessController::class, 'AuthAccess']);
+Route::post('/v1/update/access', [App\Http\Controllers\API\AccessController::class, 'UpdateeAccess']);
+
+
+
+
 
 Route::get('/v1/vend/history', [App\Http\Controllers\API\MobileController::class, 'vendHistory']);
 Route::get('/v1/vending/details', [App\Http\Controllers\API\MobileController::class, 'VendingDetails']);
@@ -40,9 +49,6 @@ Route::get('/v1/pay/history', [App\Http\Controllers\API\MobileController::class,
 Route::get('/v1/transaction', [App\Http\Controllers\API\MobileController::class, 'Transactions']);
 Route::get('/v1/notification', [App\Http\Controllers\API\MobileController::class, 'Notification']);
 
-
-Route::post('/v1/book/visitor', [App\Http\Controllers\API\MobileController::class, 'BookVisit']);
-Route::get('/v1/visit/history', [App\Http\Controllers\API\MobileController::class, 'GetVisits']);
 
 Route::post('/v1/submit/request', [App\Http\Controllers\API\MobileController::class, 'SubmitRequest']);
 Route::get('/v1/get/request', [App\Http\Controllers\API\MobileController::class, 'GetRequest']);
