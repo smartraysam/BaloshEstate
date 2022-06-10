@@ -43,11 +43,11 @@ Route::get('/v1/get/request', [App\Http\Controllers\API\RequestController::class
 Route::get('/v1/request/details', [App\Http\Controllers\API\RequestController::class, 'RequestDetails']);
 Route::get('/v1/request/category', [App\Http\Controllers\API\RequestController::class, 'LoadCategory']);
 
-//Messaging
-
 
 //Emergency
 Route::post('/v1/emergency/alert', [App\Http\Controllers\API\EmergencyController::class, 'emergencyAlert']);
 Route::post('/v1/emergency/contact', [App\Http\Controllers\API\EmergencyController::class, 'postEmergencyContact']);
 Route::get('/v1/emergency/contact', [App\Http\Controllers\API\EmergencyController::class, 'getEmergencyContact']);
 Route::post('/v1/emergency/delete', [App\Http\Controllers\API\EmergencyController::class, 'deleteEmergencyContact']);
+
+//Messaging

@@ -91,7 +91,7 @@ class AuthController extends BaseController
                 return $this->sendError('Unauthorised.', ['error' => 'Account not yet verified']);
             }
             if ($user->role == 1) {
-                $user->access_token = Str::uuid();
+                $user->access_token = $request->device_token;
                 $user->update();
                 $success['access_token'] = $user->access_token;
                 return $this->sendResponse($success, 'User login successfully.');
