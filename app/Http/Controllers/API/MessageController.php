@@ -2,46 +2,50 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Messaging;
 use Illuminate\Http\Request;
 
-class MessageController extends Controller
+class MessageController extends BaseController
 {
-  
-    
+
     public function SendMessage(Request $request)
     {
         $user = User::where('access_token', $request->access_token)->first();
         if ($user) {
-            $requestcomplain= new RequestComplain();
-            if ($request->type == "reply") {
-                $requestcomplain->parent_id = $request->parentid;
-                $pmsg = RequestComplain::where('id', $request->parentid)->orWhere('parent_id', $request->parentid)->get();
-                $requestcomplain->category = $pmsg[0]->category;
-                $requestcomplain->subject = $pmsg[0]->subject;
+            if ($user->role == 1) {
+
             } else {
-                $requestcomplain->category = $request->category;
-                $requestcomplain->subject = $request->subject;
-            }
-            $requestcomplain->request = $request->message;
-            $requestcomplain->user_id = $user->id;
-            $requestcomplain->sender_id = $user->id;
-            $requestcomplain->manager_user_id = 1;
-         
-            try {
-                if ($request->image != "null") {
-                    $name = uniqid() . '.' . "png";
-                    $filepath = storage_path('app/public/') . 'attachments/' . $name;
-                    file_put_contents($filepath, base64_decode($request->image));
-                    $requestcomplain->attachfile =   $filepath;
-                
+                $message = new Messaging();
+                if ($request->type == "reply") {
+                    $requestcomplain->parent_id = $request->parentid;
+                    $pmsg = RequestComplain::where('id', $request->parentid)->orWhere('parent_id', $request->parentid)->get();
+                    $requestcomplain->category = $pmsg[0]->category;
+                    $requestcomplain->subject = $pmsg[0]->subject;
+                } else {
+                    $requestcomplain->category = $request->category;
+                    $requestcomplain->subject = $request->subject;
                 }
-            } catch (\Throwable $th) {
-                \Log::info($th);
-                return $this->sendError('Error.', ['error' => 'Error occur']);
+                $requestcomplain->request = $request->message;
+                $requestcomplain->user_id = $user->id;
+                $requestcomplain->sender_id = $user->id;
+                $requestcomplain->manager_user_id = 1;
+
+                try {
+                    if ($request->image != "null") {
+                        $name = uniqid() . '.' . "png";
+                        $filepath = storage_path('app/public/') . 'attachments/' . $name;
+                        file_put_contents($filepath, base64_decode($request->image));
+                        $requestcomplain->attachfile = $filepath;
+
+                    }
+                } catch (\Throwable $th) {
+                    \Log::info($th);
+                    return $this->sendError('Error.', ['error' => 'Error occur']);
+                }
+                $requestcomplain->save();
+                $success['request'] = "Request submitted";
+                return $this->sendResponse($success, 'success');
             }
-            $requestcomplain->save();
-            $success['request'] = "Request submitted";
-            return $this->sendResponse($success, 'success');
         } else {
             return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
         }
