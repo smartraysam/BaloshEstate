@@ -44,22 +44,10 @@ Route::get('/v1/request/details', [App\Http\Controllers\API\RequestController::c
 Route::get('/v1/request/category', [App\Http\Controllers\API\RequestController::class, 'LoadCategory']);
 
 //Messaging
-Route::get('/v1/vend/history', [App\Http\Controllers\API\MobileController::class, 'vendHistory']);
-Route::get('/v1/vending/details', [App\Http\Controllers\API\MobileController::class, 'VendingDetails']);
-Route::get('/v1/pay/history', [App\Http\Controllers\API\MobileController::class, 'payHistory']);
 
 
-Route::get('/v1/transaction', [App\Http\Controllers\API\MobileController::class, 'Transactions']);
-Route::get('/v1/notification', [App\Http\Controllers\API\MobileController::class, 'Notification']);
-
-
-Route::post('/v1/emergency/alert', [App\Http\Controllers\API\MobileController::class, 'emergencyAlert']);
-Route::post('/v1/emergency/contact', [App\Http\Controllers\API\MobileController::class, 'postEmergencyContact']);
-Route::get('/v1/emergency/contact', [App\Http\Controllers\API\MobileController::class, 'getEmergencyContact']);
-Route::post('/v1/emergency/delete', [App\Http\Controllers\API\MobileController::class, 'deleteEmergencyContact']);
-
-Route::post('/v1/book/space', [App\Http\Controllers\API\MobileController::class, 'BookSpace']);
-Route::get('/v1/get/bookings', [App\Http\Controllers\API\MobileController::class, 'BookingHistory']);
-Route::get('/v1/booking/details', [App\Http\Controllers\API\MobileController::class, 'BookingDetails']);
-Route::get('/v1/load/venue', [App\Http\Controllers\API\MobileController::class, 'LoadSpace']);
-Route::get('/v1/available/date', [App\Http\Controllers\API\MobileController::class, 'availablespace']);
+//Emergency
+Route::post('/v1/emergency/alert', [App\Http\Controllers\API\EmergencyController::class, 'emergencyAlert']);
+Route::post('/v1/emergency/contact', [App\Http\Controllers\API\EmergencyController::class, 'postEmergencyContact']);
+Route::get('/v1/emergency/contact', [App\Http\Controllers\API\EmergencyController::class, 'getEmergencyContact']);
+Route::post('/v1/emergency/delete', [App\Http\Controllers\API\EmergencyController::class, 'deleteEmergencyContact']);
