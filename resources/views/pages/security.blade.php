@@ -17,7 +17,7 @@ font-size: 20px;
 width: 299px;
 line-height: 28px;
 letter-spacing: -0.01em;
-    background-color: #373392;
+    background-color: #FF8C2E;
 }
 
 .col-xl-4 {
@@ -95,7 +95,7 @@ letter-spacing: -0.01em;
     
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background: #373392;
+    background: #FF8C2E;
     color: #fff;
     border: none;
 }
@@ -162,7 +162,25 @@ letter-spacing: -0.01em;
 .btn-primary-reg {
     background-color: #242c6d;
     border: none;
-    background: #373392;
+    background: #FF8C2E;
+    box-shadow: 0px 8px 12px rgb(135 145 233 / 25%);
+    border-radius: 20px;
+    
+    padding: 0.7rem 2.3rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+
+
+.btn-primary-reg:hover, .btn-primary-reg:focus{
+    background-color: #242c6d;
+    border: none;
+    background: #FF8C2E;
     box-shadow: 0px 8px 12px rgb(135 145 233 / 25%);
     border-radius: 20px;
     
@@ -183,6 +201,9 @@ letter-spacing: -0.01em;
     .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
     
     margin-bottom: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 3rem;
     
 }
 
@@ -211,6 +232,9 @@ letter-spacing: -0.01em;
     .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
     
     margin-bottom: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 3rem;
     
 }
 
@@ -405,7 +429,7 @@ letter-spacing: -0.01em;
                                                                 <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Full Name</label>
+                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Full Name</label>
                                                                         
                                                                         <input type="text" class="form-control form-control-reg" id="field-3" placeholder="John Vee">
                                                                     </div>
@@ -415,7 +439,7 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Phone Number</label>
+                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Phone Number</label>
                                                                         <input type="text" class="form-control form-control-reg" id="field-3" placeholder="09123456789">
                                                                     </div>
 
@@ -427,7 +451,7 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-4" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Email Address</label>
+                                                                        <label for="field-4" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Email Address</label>
                                                                         <input type="email" class="form-control form-control-reg" id="field-3" placeholder="welcome@email.com">
                                                                     </div>
 
@@ -439,7 +463,7 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-5" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Select Estate</label>
+                                                                        <label for="field-5" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Select Estate</label>
                                                                         <select class="form-control form-control-reg">
                                                                             <option>ChevyView Estate</option>
                                                                             <option >Lekky Estate</option>
@@ -458,7 +482,7 @@ letter-spacing: -0.01em;
                                                                 <div class="checkbox my-2">
                                                                 <div class="custom-control custom-checkbox" style="padding-left:0px ;">
                                                                     <input type="checkbox" class="custom-control-input" checked="" id="customCheck3" data-parsley-multiple="groups" data-parsley-mincheck="2">
-                                                                    <label class="custom-control-label custom-control-label-check " for="customCheck3" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Activate?</label>
+                                                                    <label class="custom-control-label custom-control-label-check " for="customCheck3" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Activate?</label>
                                                                 </div>
                                                             </div>
 
@@ -486,6 +510,7 @@ letter-spacing: -0.01em;
 
                                         </div>
                                         <h4 class="page-title">Security</h4>
+                                        <br>
                                         <hr>
                                         
                                     </div>
@@ -658,7 +683,7 @@ letter-spacing: -0.01em;
                                                                 <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Name</label>
+                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Name</label>
                                                                         
                                                                         <input type="text" class="form-control form-control-reg" id="field-3" placeholder="John Vee">
                                                                     </div>
@@ -668,7 +693,7 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Phone Number</label>
+                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Phone Number</label>
                                                                         <input type="text" class="form-control form-control-reg" id="field-3" placeholder="09041234567">
                                                                     </div>
 
@@ -680,7 +705,7 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-4" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Email Address</label>
+                                                                        <label for="field-4" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Email Address</label>
                                                                         <input type="email" class="form-control form-control-reg" id="field-3" placeholder="Email">
                                                                     </div>
 
@@ -692,7 +717,7 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-5" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Estate Address</label>
+                                                                        <label for="field-5" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Estate Address</label>
                                                                         <input type="text" class="form-control form-control-reg" id="field-3" placeholder="Address">
                                                                     </div>
 

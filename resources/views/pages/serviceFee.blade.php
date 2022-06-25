@@ -360,6 +360,7 @@ td > a:hover{
                                     
                                     
                                         <h4 class="page-title">Service Fee </h4>
+                                        <br>
                                         <hr>
                                     </div>
 

@@ -184,6 +184,7 @@ letter-spacing: -0.01em;
                                     <div class="page-title-box">
                                     
                                         <h4 class="page-title">Revenue Management </h4>
+                                        <br>
                                         <hr>
                                     </div>
 

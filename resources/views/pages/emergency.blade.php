@@ -158,7 +158,7 @@
 
 
 
-.btn-primary-emergency {
+.btn-primary-emergency, .btn-primary-emergency:hover {
     background-color: #242c6d;
     border: none;
     background: #FF8C2E;
@@ -380,6 +380,7 @@ padding: 1rem 1.8rem;
 
                                         </div>
                                         <h4 class="page-title">Emergency Contacts</h4>
+                                        <br>
                                         <hr>
                                     </div>
 

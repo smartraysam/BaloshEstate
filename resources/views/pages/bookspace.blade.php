@@ -370,6 +370,7 @@ td > a:hover{
                                             
                                         </div>
                                         <h4 class="page-title">Space Booking</h4>
+                                        <br>
                                         <hr>
                                     </div>
 

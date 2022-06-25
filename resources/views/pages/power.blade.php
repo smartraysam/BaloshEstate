@@ -370,12 +370,11 @@ letter-spacing: -0.01em;
 
                                         </div>
                                         <h4 class="page-title">Power Management</h4>
-                                    </div>
-
-                                    <div class="page-title-desc">
-                                        <h6 class="page-title">Meter Number:  <span> 123456789 </span></h6>
+                                        <br>
                                         <hr>
                                     </div>
+
+                                    
 
                                     
                                     

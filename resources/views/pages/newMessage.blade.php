@@ -281,6 +281,7 @@ letter-spacing: -0.01em;
                                         </div>
                                         
                                         <h4 class="page-title">Messaging</h4> 
+                                        <br>
                                         <hr>
                                     </div>
                                         

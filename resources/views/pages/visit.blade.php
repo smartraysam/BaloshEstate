@@ -509,6 +509,7 @@ letter-spacing: -0.01em;
 
                                         </div>
                                         <h4 class="page-title">Visitor Center</h4>
+                                        <br>
                                         <hr>
                                     </div>
 

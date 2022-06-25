@@ -1,7 +1,7 @@
 <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <title>VGC Estate</title>
+        <title>Balosh | Dashboard</title>
         <meta content="Admin Dashboard" name="description" />
         <meta content="Mannatthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,6 +53,7 @@
 
 body{
     color: #878787;
+    background-color: #fff;
 }
 
 a{
@@ -60,13 +61,17 @@ a{
 }
 
 
+.col-12 .card-header{
+    text-transform: capitalize;
+}
+
 
 
 .navbar-custom {
-    background-color: #353595;
+    background-color: #fff;
     border: none;
     
-    padding: 2rem 0;
+    padding: 0rem 0;
     margin: -20px -25px 0 -25px;
     -webkit-box-shadow: 1px 0px 20px rgb(0 0 0 / 20%);
     box-shadow: 1px 0px 20px rgb(0 0 0 / 20%);
@@ -75,7 +80,7 @@ a{
 
 
 .left .topbar-left {
-    background-color: #353595;
+    background-color: #fff;
     /* height: 0px; */
     padding: 2rem 0;
 }
@@ -95,7 +100,7 @@ a{
     background-color: #ffffff;
     padding-bottom: 100px;
     width: 110%;
-    padding-top: 16px;
+    padding-top: 0px;
 }
 
 
@@ -126,6 +131,7 @@ a{
 .app-search .form-control, .app-search .form-control:focus {
     border: none;
     font-size: 13px;
+    display: none;
     height: 34px;
     color: #ffffff;
     padding-left: 20px;
@@ -391,10 +397,16 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 .btn-group.float-right{
-    margin-top: 4rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
 }
 
+
+.notification-list .noti-icon {
+    font-size: 18px;
+    vertical-align: middle;
+    color: #E3E3E3;
+}
 
 
 @media (max-width: 480px){
@@ -444,9 +456,17 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    
+    margin-bottom: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 3rem;
+
 
 }
 
+}
 
 @media (max-width: 768px){
 
@@ -495,6 +515,20 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    
+    margin-bottom: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 3rem;
+
+
+}
+
+
+
+
+
 
 }
 
@@ -510,6 +544,18 @@ div.dataTables_wrapper div.dataTables_filter {
     font-weight: 700;
     border: none;
 }
+
+.dt-button:hover{
+    background-color: #FF8C2E;
+    color: #fff;
+    box-shadow: 0px 8px 12px rgba(135, 145, 233, 0.12);
+    border-radius: 10px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+}
+
 
 
 

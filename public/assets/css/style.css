@@ -3676,7 +3676,7 @@ File: Responsive
     display: block;
   }
   .page-title {
-    display: none;
+    /* display: none; */
   }
 }
 
