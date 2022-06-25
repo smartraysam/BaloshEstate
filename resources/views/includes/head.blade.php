@@ -288,6 +288,20 @@ table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_des
 }
 
 
+.button-menu-mobile {
+    background-color: #FF8C2E;
+    border-radius: 3px;
+    
+    
+}
+
+
+.button-menu-mobile-topbar {
+    background-color: #ec536c;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
 
 .table td, .table th {
     padding: 0.4rem;
@@ -412,7 +426,7 @@ div.dataTables_wrapper div.dataTables_filter {
 @media (max-width: 480px){
 
 .navbar-custom {
-    background-color: #353595;
+    background-color: #fff;
     border: none;
     padding: 0px;
     margin: -20px -25px 0 -25px;
@@ -445,6 +459,8 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 
+
+
 .btn-group.float-right{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -471,7 +487,7 @@ div.dataTables_wrapper div.dataTables_filter {
 @media (max-width: 768px){
 
 .navbar-custom {
-    background-color: #353595;
+    background-color: #fff;
     border: none;
     padding: 0px;
     margin: -20px -25px 0 -25px;
