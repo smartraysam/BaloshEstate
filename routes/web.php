@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BaloshController;
+use App\Http\Controllers\Balosh_AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,21 @@ Route::get('/request', [BaloshController::class, 'request'])->name('request');
 Route::get('/login', [BaloshController::class, 'login'])->name('login');
 Route::get('/newMessage', [BaloshController::class, 'newMessage'])->name('newMessage');
 Route::get('/inbox', [BaloshController::class, 'inbox'])->name('inbox');
+
+
+
+
+
+
+
+//Admin Route
+Route::get('/admin', [Balosh_AdminController::class, 'admin'])->name('admin');
+Route::get('/adminPower', [Balosh_AdminController::class, 'adminPower'])->name('adminPower');
+Route::get('/adminEstate', [Balosh_AdminController::class, 'adminEstate'])->name('adminEstate');
+Route::get('/adminManagers', [Balosh_AdminController::class, 'adminManagers'])->name('adminManagers');
+Route::get('/adminRevenue', [Balosh_AdminController::class, 'adminRevenue'])->name('adminRevenue');
+Route::get('/adminLogin', [Balosh_AdminController::class, 'adminLogin'])->name('adminLogin');
+Route::get('/adminRegister', [Balosh_AdminController::class, 'adminRegister'])->name('adminRegister');
+Route::get('/adminVisitors', [Balosh_AdminController::class, 'adminVisitors'])->name('adminVisitors');
+
+

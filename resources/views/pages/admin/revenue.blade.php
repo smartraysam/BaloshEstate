@@ -183,7 +183,9 @@ letter-spacing: -0.01em;
                                 <div class="col-sm-12">
                                     <div class="page-title-box">
                                     
-                                        <h4 class="page-title">Transaction History</h4>
+                                        <h4 class="page-title">Revenue Management </h4>
+                                        <br>
+                                        <hr>
                                     </div>
 
                                     <div class="page-title-desc">
@@ -202,14 +204,14 @@ letter-spacing: -0.01em;
 
 
 
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                           Successful Transactions
+                                           TOTAL INCOME
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
-                                            20
+                                            &#8358;520,000
                                         </h2>
                                         </div>
                                     </div>
@@ -217,28 +219,42 @@ letter-spacing: -0.01em;
 
 
 
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                            Pending Service Delivery
+                                            THIS MONTH INCOME
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
-                                            5
+                                            &#8358;120,000
                                         </h2>
                                         </div>
                                     </div>
                             </div>
 
 
-                            <div class="col-lg-4 ">
+                            <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                            Unsuccessful Transactions
+                                            THIS WEEK
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
-                                            20
+                                            &#8358;40,000
+                                        </h2>
+                                        </div>
+                                    </div>
+                            </div>
+
+
+                            <div class="col-lg-3">
+                                    <div class="card head-body">
+                                        <div class="card-header">
+                                            REVENUE
+                                        </div>
+                                        <div class="card-body">
+                                        <h2 class="summary-above-table">
+                                             &#8358;20,000
                                         </h2>
                                         </div>
                                     </div>
@@ -256,7 +272,7 @@ letter-spacing: -0.01em;
 
 
                         
-                            <div class="row table-row">
+                        <div class="row table-row">
                                         <div class="col-12">
                                         <div class="card">
                                         <div class="card-header table-head">
@@ -270,11 +286,10 @@ letter-spacing: -0.01em;
                                                 class="table table-striped table-bordered display">
                                                 <thead>
                                                 <tr>
-                                                    <th class="th">Payer's Name</th>
-                                                    <th class="th">Transaction ID</th>
-                                                    <th class="th">Amount</th>
+                                                    <th class="th">Estate Name</th>
                                                     
-                                                    <th class="th">Payment Category</th>
+                                                    <th class="th">Amount Paid</th>
+                                                    
                                                     <th class="th">Payment Channel</th>
                                                     <th class="th">Delivery Status</th>
                                                     <th class="th">Transaction Date</th>
@@ -287,11 +302,11 @@ letter-spacing: -0.01em;
             
                                                 <tbody>
                                                 <tr>
-                                                    <td>Amara Vee</td>
-                                                    <td>wzswe345rYh21</td>
+                                                    <td>Osborne Estate</td>
+                                                    
                                                     <td>&#8358;24,000</td>
                                                     
-                                                    <td>Power</td>
+                                                   
                                                     <td>Online</td>
                                                     <td>Delivered</td>
                                                     <td>22/03/2021</td>
@@ -299,21 +314,17 @@ letter-spacing: -0.01em;
                                                     
                                                 </tr>
                                                 <tr>
-                                                    <td>Amara Vee</td>
-                                                    <td>wzswe345rYh21</td>
-                                                    <td>&#8358;24,000</td>
+                                                    <td> ChevyView Estate </td>
                                                     
-                                                    <td>Power</td>
+                                                    <td>&#8358;24,000</td>
                                                     <td>Online</td>
                                                     <td>Delivered</td>
                                                     <td>22/03/2021</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Amara Vee</td>
-                                                    <td>wzswe345rYh21</td>
-                                                    <td>&#8358;24,000</td>
+                                                    <td> Aerodome GRA </td>
                                                     
-                                                    <td>Power</td>
+                                                    <td>&#8358;24,000</td>
                                                     <td>Online</td>
                                                     <td>Delivered</td>
                                                     <td>22/03/2021</td>
@@ -328,7 +339,7 @@ letter-spacing: -0.01em;
                                             </div>
                                         </div>
                                         </div>
-                            </div>
+                        </div>
                             
 
                                           

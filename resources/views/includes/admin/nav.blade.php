@@ -1,28 +1,106 @@
-
-
 <style>
-    #sidebar-menu > ul > li > a {
+    #sidebar-menu>ul>li>a {
+
+        display: block;
+        padding: 10px 25px;
+        margin: 3px 0;
+        background-color: #ffffff;
+        font-family: 'Work Sans';
+        line-height: 23px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: #878787;
+    }
+
+
+    #sidebar-menu>ul>li>a:hover {
+
+        background-color: #FF8C2E;
+        color: #fff;
+
+    }
     
-    display: block;
-    padding: 10px 25px;
-    margin: 3px 0;
-    background-color: #ffffff;
 
-    font-family: 'Work Sans';
-    line-height: 23px;
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
+
+    #sidebar-menu>ul>li>a.active{
+
+        background-color: #FF8C2E;
+        color: #fff;
+
+        }
 
 
 
-color: #373392;
-}
+        #sidebar-menu>ul>li.parent-logout>a {
+
+                display: block;
+                padding: 10px 25px;
+                margin: 3px 0;
+                background-color: #ffffff;
+                font-family: 'Work Sans';
+                line-height: 23px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                color: red;
+            }
 
 
-.logo-large {
-    height: 4rem;
-}
+        #sidebar-menu>ul>li.parent-logout>a:hover {
+
+                background-color: #FF8C2E;
+                color: #fff;
+
+        }
+
+
+        #sidebar-menu>ul>li.parent-logout>a.active{
+
+        background-color: #FF8C2E;
+        color: #fff;
+
+        }
+
+    
+
+
+    .logo-large {
+        height: 4rem;
+    }
+
+
+
+
+
+    /***  desired colors for children  ***/
+
+
+    .parent:hover {
+        color: #fff;
+        /* background: #85c1fc; */
+    }
+
+
+
+    /****  magic trick  *****/
+    .parent svg path {
+        fill: currentcolor;
+    }
+
+
+
+    .parent-logout:hover {
+        color: #fff;
+        /* background: #85c1fc; */
+    }
+
+
+
+    /****  magic trick  *****/
+    .parent-logout svg path {
+        fill: currentcolor;
+    }
 </style>
 
 
@@ -35,74 +113,156 @@ color: #373392;
 
 
 <div class="left side-menu">
-                <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
-                    <i class="ion-close"></i>
-                </button>
+    <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+        <i class="ion-close"></i>
+    </button>
 
-                <!-- LOGO -->
-                <div class="topbar-left">
-                    <div class="text-center">
-                        <!--<a href="index.html" class="logo"><i class="mdi mdi-assistant"></i>Zoter</a>-->
-                        <a href="{{ route('adminHome') }}" class="logo">
-                            <img src="assets/images/1.png" alt="" class="logo-large">
-                        </a>
-                    </div>
-                </div>
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <div class="text-center">
+            <!--<a href="index.html" class="logo"><i class="mdi mdi-assistant"></i>Zoter</a>-->
+            <a href="{{ route('admin') }}" class="logo">
+                <img src="assets/images/balosh-logo.png" alt="" class="logo-large"> 
+            </a>
+        </div>
+        
+    </div>
+    <hr>
 
-                <div class="sidebar-inner niceScrollleft">
+    <div class="sidebar-inner niceScrollleft">
 
-                    <div id="sidebar-menu">
-                        <ul>
-                            <li class="menu-title"></li>
+        <div id="sidebar-menu">
+            <ul>
+                <li class="menu-title"></li>
 
-                            <li>
-                                <a href="{{ route('adminHome') }}" class="waves-effect">
-                                <img src="assets/images/Document FL.svg" alt="">
-                                    <span> Home <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
-                                </a>
-                            </li>
+                <li class='parent'>
+                    <a href="{{ route('admin') }}" class="waves-effect ">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_52_139" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_52_139)">
+                                <path d="M16.25 11.25V3.75H26.25V11.25H16.25ZM3.75 16.25V3.75H13.75V16.25H3.75ZM16.25 26.25V13.75H26.25V26.25H16.25ZM3.75 26.25V18.75H13.75V26.25H3.75Z" fill="#878787" />
+                            </g>
+                        </svg>
 
-                            <li >
-                                <a href="{{ route('adminPower') }}" class="waves-effect"><img src="assets/images/power.svg" alt=""> <span> Power Management </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                
-                            </li>
+                        <span> Dashboard <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
+                </li>
 
-                            
-                            
+                <li class='parent'>
+                    <a href="{{ route('adminPower') }}" class="waves-effect">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_7_237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="-1" width="31" height="31">
+                                <rect x="0.117676" y="-0.235413" width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_7_237)">
+                                <path d="M15.1177 27.2646C14.576 27.2646 14.0864 27.1346 13.6489 26.8746C13.2114 26.6138 12.8677 26.2646 12.6177 25.8271C11.9302 25.8271 11.3418 25.5825 10.8527 25.0933C10.3627 24.6033 10.1177 24.0146 10.1177 23.3271V18.8896C8.88851 18.0771 7.90434 17.0042 7.16518 15.6708C6.42518 14.3375 6.05518 12.8896 6.05518 11.3271C6.05518 8.80625 6.93518 6.66542 8.69518 4.90459C10.456 3.14459 12.5968 2.26459 15.1177 2.26459C17.6385 2.26459 19.7789 3.14459 21.5389 4.90459C23.2998 6.66542 24.1802 8.80625 24.1802 11.3271C24.1802 12.9313 23.8106 14.3896 23.0714 15.7021C22.3314 17.0146 21.3468 18.0771 20.1177 18.8896V23.3271C20.1177 24.0146 19.8731 24.6033 19.3839 25.0933C18.8939 25.5825 18.3052 25.8271 17.6177 25.8271C17.3677 26.2646 17.0239 26.6138 16.5864 26.8746C16.1489 27.1346 15.6593 27.2646 15.1177 27.2646ZM12.6177 23.3271H17.6177V22.2021H12.6177V23.3271ZM12.6177 20.9521H17.6177V19.7646H12.6177V20.9521ZM12.3677 17.2646H14.1802V13.8896L11.4302 11.1396L12.7427 9.82709L15.1177 12.2021L17.4927 9.82709L18.8052 11.1396L16.0552 13.8896V17.2646H17.8677C18.9927 16.7229 19.9093 15.9258 20.6177 14.8733C21.326 13.8217 21.6802 12.6396 21.6802 11.3271C21.6802 9.49375 21.0448 7.94167 19.7739 6.67084C18.5031 5.4 16.951 4.76459 15.1177 4.76459C13.2843 4.76459 11.7323 5.4 10.4614 6.67084C9.19059 7.94167 8.55518 9.49375 8.55518 11.3271C8.55518 12.6396 8.90934 13.8217 9.61768 14.8733C10.326 15.9258 11.2427 16.7229 12.3677 17.2646Z" fill="#878787" />
+                            </g>
+                        </svg>
+                        <span> Power Management </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
 
-                            <li >
-                                <a href="{{ route('adminVisit') }}" class="waves-effect"><img src="assets/images/visitors.svg" alt=""> <span> Visitors Center </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                
-                            </li>
-
-                            
-
-                            <li >
-                                <a href="{{ route('estateManager') }}" class="waves-effect"><img src="assets/images/spacebook.svg" alt=""> <span> Estate Managers </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                
-                            </li>
-
-                            <li >
-                                <a href="{{route('adminTransact')}}" class="waves-effect"><img src="assets/images/transact-history.svg" alt=""><span> Transaction History </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                
-                            </li>
-
-                            
-
-                            
+                </li>
 
 
-                            <br><br>
+                
 
-                            <br>
 
-                            <li >
-                                <a href="{{route('adminLogin')}}" class="waves-effect"><img src="assets/images/signout.svg" alt=""><span> Sign Out </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                
-                            </li>
+                <li class='parent'>
+                    <a href="{{route('adminManagers')}}" class="waves-effect">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_8_314" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_8_314)">
+                                <path d="M5 26.25V11.25L15 3.75L25 11.25V26.25H5ZM7.5 12.5V22.5C8.5625 21.7083 9.72417 21.0938 10.985 20.6562C12.245 20.2188 13.5833 20 15 20C16.4167 20 17.7554 20.2188 19.0163 20.6562C20.2763 21.0938 21.4375 21.7083 22.5 22.5V12.5L15 6.875L7.5 12.5ZM15 18.75C13.9583 18.75 13.0729 18.3854 12.3438 17.6562C11.6146 16.9271 11.25 16.0417 11.25 15C11.25 13.9583 11.6146 13.0729 12.3438 12.3438C13.0729 11.6146 13.9583 11.25 15 11.25C16.0417 11.25 16.9271 11.6146 17.6562 12.3438C18.3854 13.0729 18.75 13.9583 18.75 15C18.75 16.0417 18.3854 16.9271 17.6562 17.6562C16.9271 18.3854 16.0417 18.75 15 18.75ZM15 16.25C15.3542 16.25 15.6513 16.13 15.8913 15.89C16.1304 15.6508 16.25 15.3542 16.25 15C16.25 14.6458 16.1304 14.3487 15.8913 14.1087C15.6513 13.8696 15.3542 13.75 15 13.75C14.6458 13.75 14.3492 13.8696 14.11 14.1087C13.87 14.3487 13.75 14.6458 13.75 15C13.75 15.3542 13.87 15.6508 14.11 15.89C14.3492 16.13 14.6458 16.25 15 16.25ZM10.1875 23.75H19.8125C19.0833 23.3333 18.3179 23.0208 17.5162 22.8125C16.7137 22.6042 15.875 22.5 15 22.5C14.125 22.5 13.2867 22.6042 12.485 22.8125C11.6825 23.0208 10.9167 23.3333 10.1875 23.75Z" fill="#878787" />
+                            </g>
+                        </svg>
 
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div> <!-- end sidebarinner -->
-            </div>
+                        <span> Estate Managers </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
+
+                </li>
+
+
+
+
+                <li class='parent'>
+                    <a href="{{route('adminEstate')}}" class="waves-effect">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_8_314" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_8_314)">
+                                <path d="M5 26.25V11.25L15 3.75L25 11.25V26.25H5ZM7.5 12.5V22.5C8.5625 21.7083 9.72417 21.0938 10.985 20.6562C12.245 20.2188 13.5833 20 15 20C16.4167 20 17.7554 20.2188 19.0163 20.6562C20.2763 21.0938 21.4375 21.7083 22.5 22.5V12.5L15 6.875L7.5 12.5ZM15 18.75C13.9583 18.75 13.0729 18.3854 12.3438 17.6562C11.6146 16.9271 11.25 16.0417 11.25 15C11.25 13.9583 11.6146 13.0729 12.3438 12.3438C13.0729 11.6146 13.9583 11.25 15 11.25C16.0417 11.25 16.9271 11.6146 17.6562 12.3438C18.3854 13.0729 18.75 13.9583 18.75 15C18.75 16.0417 18.3854 16.9271 17.6562 17.6562C16.9271 18.3854 16.0417 18.75 15 18.75ZM15 16.25C15.3542 16.25 15.6513 16.13 15.8913 15.89C16.1304 15.6508 16.25 15.3542 16.25 15C16.25 14.6458 16.1304 14.3487 15.8913 14.1087C15.6513 13.8696 15.3542 13.75 15 13.75C14.6458 13.75 14.3492 13.8696 14.11 14.1087C13.87 14.3487 13.75 14.6458 13.75 15C13.75 15.3542 13.87 15.6508 14.11 15.89C14.3492 16.13 14.6458 16.25 15 16.25ZM10.1875 23.75H19.8125C19.0833 23.3333 18.3179 23.0208 17.5162 22.8125C16.7137 22.6042 15.875 22.5 15 22.5C14.125 22.5 13.2867 22.6042 12.485 22.8125C11.6825 23.0208 10.9167 23.3333 10.1875 23.75Z" fill="#878787" />
+                            </g>
+                        </svg>
+
+                        <span> Registered Estate </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
+
+                </li>
+
+
+
+
+                
+
+                <li class='parent'>
+                    <a href="{{route('adminRevenue')}}" class="waves-effect">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_7_219" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                                <rect width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_7_219)">
+                                <path d="M13.0625 19.375C13.5625 19.875 14.2083 20.1196 15 20.1087C15.7917 20.0988 16.375 19.8125 16.75 19.25L23.75 8.75L13.25 15.75C12.6875 16.125 12.3908 16.6979 12.36 17.4688C12.3283 18.2396 12.5625 18.875 13.0625 19.375ZM6.375 25C5.9375 25 5.52083 24.8958 5.125 24.6875C4.72917 24.4792 4.41667 24.1875 4.1875 23.8125C3.64583 22.875 3.22917 21.8804 2.9375 20.8288C2.64583 19.7762 2.5 18.6667 2.5 17.5C2.5 15.7708 2.82833 14.1508 3.485 12.64C4.14083 11.13 5.03667 9.80708 6.1725 8.67125C7.3075 7.53625 8.63542 6.64042 10.1562 5.98375C11.6771 5.32792 13.2917 5 15 5C16.2292 5 17.4117 5.17167 18.5475 5.515C19.6825 5.85917 20.75 6.375 21.75 7.0625L19.375 8.5625C18.6875 8.20833 17.9742 7.94292 17.235 7.76625C16.495 7.58875 15.75 7.5 15 7.5C12.2292 7.5 9.87 8.47375 7.9225 10.4212C5.97417 12.3696 5 14.7292 5 17.5C5 18.375 5.11958 19.2396 5.35875 20.0938C5.59875 20.9479 5.9375 21.75 6.375 22.5H23.625C24.1042 21.7083 24.4533 20.8854 24.6725 20.0312C24.8908 19.1771 25 18.2917 25 17.375C25 16.625 24.9117 15.8958 24.735 15.1875C24.5575 14.4792 24.2917 13.7917 23.9375 13.125L25.4375 10.75C26.0625 11.7292 26.5575 12.7708 26.9225 13.875C27.2867 14.9792 27.4792 16.125 27.5 17.3125C27.5208 18.5 27.3854 19.6354 27.0938 20.7188C26.8021 21.8021 26.375 22.8333 25.8125 23.8125C25.5833 24.1875 25.2708 24.4792 24.875 24.6875C24.4792 24.8958 24.0625 25 23.625 25H6.375Z" fill="#878787" />
+                            </g>
+                        </svg>
+                        <span> Revenue Management </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
+
+                </li>
+
+
+
+                <li class='parent'>
+                    <a href="{{ route('adminVisitors') }}" class="waves-effect">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_7_247" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="-1" width="31" height="31">
+                                <rect x="0.117676" y="-0.235428" width="30" height="30" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_7_247)">
+                                <path d="M6.36768 26.0146C5.68018 26.0146 5.09143 25.77 4.60143 25.2808C4.11226 24.7908 3.86768 24.2021 3.86768 23.5146V6.01457C3.86768 5.32707 4.11226 4.73832 4.60143 4.24832C5.09143 3.75916 5.68018 3.51457 6.36768 3.51457H11.6177C11.9093 2.76457 12.3677 2.16041 12.9927 1.70207C13.6177 1.24374 14.326 1.01457 15.1177 1.01457C15.9093 1.01457 16.6177 1.24374 17.2427 1.70207C17.8677 2.16041 18.326 2.76457 18.6177 3.51457H23.8677C24.5552 3.51457 25.1439 3.75916 25.6339 4.24832C26.1231 4.73832 26.3677 5.32707 26.3677 6.01457V23.5146C26.3677 24.2021 26.1231 24.7908 25.6339 25.2808C25.1439 25.77 24.5552 26.0146 23.8677 26.0146H6.36768ZM15.1177 5.07707C15.3885 5.07707 15.6127 4.98832 15.7902 4.81082C15.9668 4.63416 16.0552 4.41041 16.0552 4.13957C16.0552 3.86874 15.9668 3.64457 15.7902 3.46707C15.6127 3.29041 15.3885 3.20207 15.1177 3.20207C14.8468 3.20207 14.6231 3.29041 14.4464 3.46707C14.2689 3.64457 14.1802 3.86874 14.1802 4.13957C14.1802 4.41041 14.2689 4.63416 14.4464 4.81082C14.6231 4.98832 14.8468 5.07707 15.1177 5.07707ZM6.36768 22.0771C7.49268 20.9729 8.80018 20.1029 10.2902 19.4671C11.7793 18.8321 13.3885 18.5146 15.1177 18.5146C16.8468 18.5146 18.4564 18.8321 19.9464 19.4671C21.4356 20.1029 22.7427 20.9729 23.8677 22.0771V6.01457H6.36768V22.0771ZM15.1177 16.0146C16.326 16.0146 17.3573 15.5875 18.2114 14.7333C19.0656 13.8792 19.4927 12.8479 19.4927 11.6396C19.4927 10.4312 19.0656 9.39999 18.2114 8.54582C17.3573 7.69166 16.326 7.26457 15.1177 7.26457C13.9093 7.26457 12.8781 7.69166 12.0239 8.54582C11.1698 9.39999 10.7427 10.4312 10.7427 11.6396C10.7427 12.8479 11.1698 13.8792 12.0239 14.7333C12.8781 15.5875 13.9093 16.0146 15.1177 16.0146ZM8.86768 23.5146H21.3677C21.3677 23.4521 21.3677 23.4 21.3677 23.3583C21.3677 23.3167 21.3677 23.2646 21.3677 23.2021C20.4927 22.4729 19.5239 21.9262 18.4614 21.5621C17.3989 21.1971 16.2843 21.0146 15.1177 21.0146C13.951 21.0146 12.8364 21.1971 11.7739 21.5621C10.7114 21.9262 9.74268 22.4729 8.86768 23.2021C8.86768 23.2646 8.86768 23.3167 8.86768 23.3583C8.86768 23.4 8.86768 23.4521 8.86768 23.5146ZM15.1177 13.5146C14.5968 13.5146 14.1543 13.3321 13.7902 12.9671C13.4252 12.6029 13.2427 12.1604 13.2427 11.6396C13.2427 11.1187 13.4252 10.6762 13.7902 10.3121C14.1543 9.94707 14.5968 9.76457 15.1177 9.76457C15.6385 9.76457 16.081 9.94707 16.4452 10.3121C16.8102 10.6762 16.9927 11.1187 16.9927 11.6396C16.9927 12.1604 16.8102 12.6029 16.4452 12.9671C16.081 13.3321 15.6385 13.5146 15.1177 13.5146Z" fill="#878787" />
+                            </g>
+                        </svg>
+
+                        <span> Visitors Center </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
+
+                </li>
+
+
+
+                <br>
+
+                <li class='parent-logout'>
+                    <a href="{{route('adminLogin')}}" class="waves-effect">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_248_1290" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                                    <rect width="30" height="30" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_248_1290)">
+                                    <path d="M3.75 16.25V13.75H14.5625L11.375 10.5625L13.125 8.75L19.375 15L13.125 21.25L11.375 19.4375L14.5625 16.25H3.75ZM6.25 18.75V23.75H23.75V6.25H6.25V11.25H3.75V6.25C3.75 5.5625 3.99458 4.97375 4.48375 4.48375C4.97375 3.99458 5.5625 3.75 6.25 3.75H23.75C24.4375 3.75 25.0263 3.99458 25.5163 4.48375C26.0054 4.97375 26.25 5.5625 26.25 6.25V23.75C26.25 24.4375 26.0054 25.0263 25.5163 25.5163C25.0263 26.0054 24.4375 26.25 23.75 26.25H6.25C5.5625 26.25 4.97375 26.0054 4.48375 25.5163C3.99458 25.0263 3.75 24.4375 3.75 23.75V18.75H6.25Z" fill="#FF0808" />
+                                </g>
+                            </svg>
+                        <span> Sign Out </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                    </a>
+
+                </li>
+
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div> <!-- end sidebarinner -->
+</div>

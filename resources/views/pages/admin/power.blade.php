@@ -17,7 +17,7 @@ font-size: 20px;
 width: 299px;
 line-height: 28px;
 letter-spacing: -0.01em;
-    background-color: #373392;
+    background-color: #FF8C2E;
 }
 
 
@@ -94,7 +94,7 @@ letter-spacing: -0.01em;
     
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background: #373392;
+    background: #FF8C2E;
     color: #fff;
     border: none;
 }
@@ -161,7 +161,7 @@ letter-spacing: -0.01em;
 .btn-primary-power {
     background-color: #242c6d;
     border: none;
-    background: #373392;
+    background: #FF8C2E;
     box-shadow: 0px 8px 12px rgb(135 145 233 / 25%);
     border-radius: 20px;
     
@@ -191,6 +191,25 @@ letter-spacing: -0.01em;
     padding-left: 0px;
 }
 
+
+.success-btns{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.btn-success-cancel {
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    
+}
+
+.btn-success-dashboard {
+    margin-left: 0px; 
+    padding: 1rem 1.8rem;
+   
+}
+
+
 }
 
 
@@ -206,6 +225,28 @@ letter-spacing: -0.01em;
     padding-right: 0px;
     padding-left: 0px;
 }
+
+
+
+.success-btns{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.btn-success-cancel {
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    
+}
+
+.btn-success-dashboard {
+    margin-left: 0px; 
+    padding: 1rem 1.8rem;
+   
+}
+
+
+
 
 }
 
@@ -323,7 +364,7 @@ letter-spacing: -0.01em;
                                     <div class="page-title-box">
                                     <div class="btn-group float-right">
                                             <button type="button" class="btn btn-danger btn-top" data-toggle="modal"  style="background:#FF0808; color:#fff; border-radius: 1rem; padding:1rem 0;" data-target="#exampleModalform2">
-                                               Buy Electricity
+                                               Send Resident Electricity
                                             </button>
 
                                             <div class="modal fade" id="exampleModalform2" tabindex="-1" role="dialog">
@@ -339,7 +380,7 @@ letter-spacing: -0.01em;
                                                                 <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Purchase Option</label>
+                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Purchase Option</label>
                                                                         
                                                                         <select class="form-control form-control-power">
                                                                             <option>USSD</option>
@@ -353,17 +394,37 @@ letter-spacing: -0.01em;
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Address</label>
-                                                                        <input type="text" class="form-control form-control-power" id="field-3" placeholder="&#8358;20,000">
+                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Meter Number</label>
+                                                                        <input type="text" class="form-control form-control-power" id="field-3" placeholder="123456789">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Name</label>
+                                                                        <input type="text" class="form-control form-control-power" id="field-3" placeholder="John Vee">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #878787;">Amount</label>
+                                                                        <input type="text" class="form-control form-control-power" id="field-3" placeholder="&#8358;20,000">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
                                                             
                                                         </div>                                          
                                                         <div class="modal-footer modal-footer-power">
                                                             
-                                                            <button type="button" class="btn btn-primary btn-primary-power">Purchase</button>
+                                                            <!-- <button type="button" class="btn btn-primary btn-primary-power">Purchase</button> -->
+                                                            <a type="button" href="#myModalpower" data-toggle="modal" class="btn btn-primary btn-primary-power" data-dismiss="modal">Purchase</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -372,37 +433,66 @@ letter-spacing: -0.01em;
 
                                         </div>
                                         <h4 class="page-title">Power Management</h4>
+                                        <hr>
                                     </div>
 
-                                    <div class="page-title-desc">
-                                        <h6 class="page-title">Meter Number:  <span> 123456789 </span></h6>
-                                    </div>
+                                    
+
+                                    
                                     
                                     
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <!-- end page title end breadcrumb -->
+                            
 
 
 
-                            
-                            
-                            
+                            <!-- Modal HTML -->
+                            <div id="myModalpower" class="modal fade">
+                                    <div class="modal-dialog modal-confirm">
+                                        <div class="modal-content modal-content-success">
+                                            <div class="modal-header modal-header-success-img justify-content-center">
+                                                <div class="icon-box">
+                                                    <img src="assets/images/success-img.png" width="150" class="modal-success-img" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="modal-body modal-body-success text-center">
+                                                <h4>Success!</h4>	
+                                               
+                                                <div class="success-btns">
+                                                <button class="btn btn-success btn-success-cancel" data-dismiss="modal"><span>Cancel</span> </button>
+                                                <button class="btn btn-success btn-success-dashboard"  data-dismiss="modal"><span>Dashboard</span> </button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--end Modal HTML -->
+
+
+
+
+
+
+
+
 
                             
                         <div class="row">
 
 
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 push-down-twice">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                            Last Unit Purchase
+                                            Registered Meters
                                         </div>
                                         <div class="card-body">
                                             <h2 class="summary-above-table">
-                                                250.55 <span>kWH</span>
+                                                200
                                             </h2>
                                         </div>
                                     </div>
@@ -413,7 +503,7 @@ letter-spacing: -0.01em;
                             <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                            This Month's Purchase
+                                            Revenue
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
@@ -427,7 +517,7 @@ letter-spacing: -0.01em;
                             <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                            Last Purchase
+                                            Vending
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
@@ -442,7 +532,7 @@ letter-spacing: -0.01em;
                             <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                            Purchase on Credit
+                                            On Credit Sales
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
@@ -467,7 +557,7 @@ letter-spacing: -0.01em;
                                         <div class="col-12">
                                         <div class="card">
                                         <div class="card-header table-head">
-                                                Power Transactions
+                                               Vending Details
                                             </div>
                                             <div class="card-body">
                                             
@@ -477,47 +567,39 @@ letter-spacing: -0.01em;
                                                 class="table table-striped table-bordered display">
                                                 <thead>
                                                 <tr>
-                                                    <th class="th">Transaction ID</th>
+                                                    <th class="th">Estate</th>
+                                                    
                                                     <th class="th">Amount</th>
-                                                    <th class="th">Vend Value</th>
+                                                    <th class="th">Vended Amount</th>
                                                     <th class="th">Unit(kH)</th>
-                                                    <th class="th">Payment Status</th>
-                                                    <th class="th">Vending Status</th>
-                                                    <th class="th">Token</th>
-                                                    <th class="th">Transaction Date</th>
+                                                    
                                                     
                                                 </tr>
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td>123456789</td>
+                                                    <td> Osborne Estate </td>
+                                                    
                                                     <td>&#8358;20000</td>
                                                     <td>&#8358;16,900</td>
                                                     <td>220kWH</td>
-                                                    <td><span class="item-border"> Paid</span></td>
-                                                    <td><span class="item-border-1">Cancelled</span> </td>
-                                                    <td>23222298362781</td>
-                                                    <td>20/03/2022</td>
+                                                    
                                                 </tr>
                                                 <tr>
-                                                    <td>123456789</td>
+                                                    <td> ChevyView Estate </td>
+                                                    
                                                     <td>&#8358;20000</td>
                                                     <td>&#8358;16,900</td>
                                                     <td>220kWH</td>
-                                                    <td><span class="item-border"> Paid</span></td>
-                                                    <td><span class="item-border">Cancelled</span> </td>
-                                                    <td>23222298362781</td>
-                                                    <td>20/03/2022</td>
                                                 </tr>
+
+
                                                 <tr>
-                                                    <td>123456789</td>
+                                                    <td> Lekky Estate </td>
+                                                    
                                                     <td>&#8358;20000</td>
                                                     <td>&#8358;16,900</td>
                                                     <td>220kWH</td>
-                                                    <td><span class="item-border"> Paid </span></td>
-                                                    <td><span class="item-border-2">Cancelled</span> </td>
-                                                    <td>23222298362781</td>
-                                                    <td>20/03/2022</td>
                                                 </tr>
                                                     
                                                     
@@ -545,4 +627,11 @@ letter-spacing: -0.01em;
 
                 
             </div>
+
+
+
+
+            
+
+            
 @stop

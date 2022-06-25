@@ -78,10 +78,6 @@ a{
 }
 
 
-.push-down{
-    margin-top: 2rem;
-}
-
 
 
 
@@ -467,6 +463,10 @@ div.dataTables_wrapper div.dataTables_filter {
    
 }
 
+.push-down{
+    margin-top: 2rem;
+}
+
 
 
 
@@ -526,6 +526,11 @@ div.dataTables_wrapper div.dataTables_filter {
     padding: 0px;
    
 }
+
+.push-down{
+    margin-top: 2rem;
+}
+
 
 
 .btn-group.float-right{

@@ -345,6 +345,24 @@ letter-spacing: -0.01em;
         display: flex;
     }
 
+
+    .success-btns{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.btn-success-cancel {
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    
+}
+
+.btn-success-dashboard {
+    margin-left: 0px; 
+    padding: 1rem 1.8rem;
+   
+}
+
 }
 
 
@@ -354,6 +372,26 @@ letter-spacing: -0.01em;
         float:none !important;
         display: flex;
     }
+
+
+    .success-btns{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.btn-success-cancel {
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    
+}
+
+.btn-success-dashboard {
+    margin-left: 0px; 
+    padding: 1rem 1.8rem;
+   
+}
+
+
 }
 
 
@@ -463,136 +501,13 @@ letter-spacing: -0.01em;
                                 <div class="col-sm-12">
                                     <div class="page-title-box">
                                     <div class="btn-group float-right-btn ">
-                                            <button type="button" class="btn btn-danger modal-btn-left btn-top" style="background:#FF0808; color:#fff; border-radius: 1rem; padding: 1rem 10px;" data-toggle="modal" data-target="#exampleModalform2">
-                                                Generate Group Invite
-                                            </button>
-
                                             
-                                            <div class="modal fade" id="exampleModalform2" tabindex="-1" role="dialog">
-                                                <div class="modal-dialog modal-dialog-groupInvite" role="document">
-                                                    <div class="modal-content modal-content-groupInvite">
-                                                        <div class="modal-header modal-groupInvite-header">
-                                                            <h5 class="modal-title">Group Invite</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Contact Person</label>
-                                                                        
-                                                                        <input type="text" class="form-control form-control-groupInvite" id="field-3" placeholder="John Vee">
-                                                                    </div>
-                                                                </div>
-                                                            
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-3" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Phone Number</label>
-                                                                        <input type="text" class="form-control form-control-groupInvite" id="field-3" placeholder="09041234567">
-                                                                    </div>
 
-                                                                    
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-4" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Entry Date</label>
-                                                                        <input class="form-control form-control-groupInvite" type="date" value="select" id="example-date-input">
-                                                                    </div>
-
-                                                                    
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-5" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Entry Time</label>
-                                                                        <input class="form-control form-control-groupInvite" type="time" value="12:00:00" id="example-time-input">
-                                                                    </div>
-
-                                                                    
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Period</label>
-                                                                        
-                                                                        <input type="text" class="form-control form-control-groupInvite" id="field-3" placeholder="2hrs 30mins">
-                                                                    </div>
-                                                                </div>
-                                                            
-                                                            </div>
-
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Destination</label>
-                                                                        
-                                                                        <input type="text" class="form-control form-control-groupInvite" id="field-3" placeholder="Street 1">
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                        <label for="field-1" class="control-label" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Total Guests</label>
-                                                                        
-                                                                        <input type="text" class="form-control form-control-groupInvite" id="field-3" placeholder="200">
-                                                                    </div>
-                                                                </div>
-                                                            
-                                                            </div>
-                                                            
-
-
-                                                            <div class="row">
-                                                            <label for="field-1" class="control-label label-upload" style="font-family: 'Work Sans'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 21px; color: #303972;">Attach Visitor's List</label>
-                                                                <div class="col-md-12">
-                                                                
-                                                                    <div class="form-group form-group-groupInvite">
-                                                                    
-                                                                    <input type="file" class="custom-file-input form-control-groupInvite" id="customFile" name="filename">
-                                                                        <label class="custom-file-label" for="customFile"></label>
-                                                                    </div>
-
-                                                                    
-                                                                </div>
-                                                            </div>
-
-
-
-                                                            
-                                                                
-                                                            
-                                                            
-                                                        </div>                                          
-                                                        <div class="modal-footer modal-footer-groupInvite">
-                                                            
-                                                            <button type="button" class="btn btn-primary btn-primary-groupInvite">Generate</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>  
-
-
-
-
-
-                                            <button type="button" class="btn btn-danger modal-btn-right btn-top"  style="background:#FF0808; color:#fff; border-radius: 1rem; padding:1rem 10px;" data-toggle="modal" data-target="#exampleModalform1">
-                                                Generate Visitor Token
+                                            <button type="button" class="btn btn-danger btn-top" data-toggle="modal"  style="background:#FF0808; color:#fff; border-radius: 1rem; padding:1rem 0;" data-target="#exampleModalform1">
+                                              Generate Visitor's Token
                                             </button>
                                             
+
                                             <div class="modal fade" id="exampleModalform1" tabindex="-1" role="dialog">
                                                 <div class="modal-dialog modal-dialog-visitorToken" role="document">
                                                     <div class="modal-content modal-content-visitorToken">
@@ -664,14 +579,18 @@ letter-spacing: -0.01em;
                                                         </div>                                          
                                                         <div class="modal-footer modal-footer-visitorToken">
                                                             
-                                                            <button type="button" class="btn btn-primary btn-primary-visitorToken">Generate</button>
+                                                            <!-- <button type="button" class="btn btn-primary btn-primary-visitorToken">Generate</button> -->
+                                                            <a type="button" href="#myModalvisitorToken" data-toggle="modal" class="btn btn-primary btn-primary-visitorToken" data-dismiss="modal" >Generate</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>  
+                                        
 
                                         </div>
                                         <h4 class="page-title">Visitor Center</h4>
+                                        <br>
+                                        <hr>
                                     </div>
 
                                     <div class="page-title-desc">
@@ -685,12 +604,75 @@ letter-spacing: -0.01em;
                             <!-- end page title end breadcrumb -->
                             
 
+
+                            <!-- Modal HTML -->
+                            <div id="myModalvisitorToken" class="modal fade">
+                                    <div class="modal-dialog modal-confirm">
+                                        <div class="modal-content modal-content-success">
+                                            <div class="modal-header modal-header-success-img justify-content-center">
+                                                <div class="icon-box">
+                                                    <img src="assets/images/success-img.png" width="150" class="modal-success-img" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="modal-body modal-body-success text-center">
+                                                <h4>Success!</h4>	
+                                               
+                                                <div class="success-btns">
+                                                <button class="btn btn-success btn-success-cancel" data-dismiss="modal"><span>Cancel</span> </button>
+                                                <button class="btn btn-success btn-success-dashboard"  data-dismiss="modal"><span>Dashboard</span> </button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--end Modal HTML -->
+
+
+
+
+
+
+                            <!-- Modal HTML -->
+                            <div id="myModalgroupInvite" class="modal fade">
+                                    <div class="modal-dialog modal-confirm">
+                                        <div class="modal-content modal-content-success">
+                                            <div class="modal-header modal-header-success-img justify-content-center">
+                                                <div class="icon-box">
+                                                    <img src="assets/images/success-img.png" width="150" class="modal-success-img" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="modal-body modal-body-success text-center">
+                                                <h4>Success!</h4>	
+                                               
+                                                <div class="success-btns">
+                                                <button class="btn btn-success btn-success-cancel" data-dismiss="modal"><span>Cancel</span> </button>
+                                                <button class="btn btn-success btn-success-dashboard"  data-dismiss="modal"><span>Dashboard</span> </button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--end Modal HTML -->
+
+
+
+
+
+
+
+
+
+
+
+
                             
                         <div class="row">
 
 
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 push-down">
                                     <div class="card head-body">
                                         <div class="card-header">
                                            Total Visitors
@@ -737,7 +719,7 @@ letter-spacing: -0.01em;
                             <div class="col-lg-3">
                                     <div class="card head-body">
                                         <div class="card-header">
-                                           Today's Entry Request
+                                           Today's Entry
                                         </div>
                                         <div class="card-body">
                                         <h2 class="summary-above-table">
@@ -759,7 +741,7 @@ letter-spacing: -0.01em;
                                         <div class="col-12">
                                         <div class="card">
                                         <div class="card-header table-head">
-                                                Visitor's Transactions      
+                                                Visitor's History      
                                             </div>
                                             <div class="card-body">
                                             
@@ -769,15 +751,12 @@ letter-spacing: -0.01em;
                                                 class="table table-striped table-bordered display">
                                                 <thead>
                                                 <tr>
-                                                    <th class="th">Visiting Token</th>
-                                                    <th class="th">Visitor's Name</th>
-                                                    <th class="th">Visitor's Number</th>
-                                                    <th class="th">Entry Date</th>
-                                                    <th class="th">Entry Time</th>
-                                                    <th class="th">Entry Status</th>
-                                                    <th class="th">Exit Status</th>
-                                                    <th class="th">Validity Period</th>
-                                                    <th class="th">Status</th>
+                                                    <th class="th">Estate</th>
+                                                    <th class="th">Total Visitors</th>
+                                                    <th class="th">Date</th>
+                                                   
+                                                    <th class="th">Total Token </th>
+                                                    
                                                     
                                                 </tr>
                                                 </thead>
@@ -785,44 +764,35 @@ letter-spacing: -0.01em;
             
                                                 <tbody>
                                                 <tr>
-                                                    <td>1234567890</td>
-                                                    <td>John Vee</td>
-                                                    <td>08131107261</td>
+                                                    <td>ChevyView Estate </a></td>
+                                                    <td>2,000</td>
+                                                    
                                                     <td>20/03/2022</td>
-                                                    <td>10:00 AM</td>
-                                                    <td>Inside Estate</td>
-                                                    <td>Left Estate <br> 10:30 AM</td>
-                                                    <td>30 Mins</td>
-                                                    <td><span class="item-border-1">Expired</span> </td>
-                                                    <!-- <td><span class="item-border"> Paid</span></td> -->
+                                                    
+                                                    <td>1,900</td>
+                                                    
                                                     
                                                     
                                                 </tr>
                                                 <tr>
-                                                    <td>1234567890</td>
-                                                    <td>John Vee</td>
-                                                    <td>08131107261</td>
+                                                    <td> Osborne Estate </a></td>
+                                                    <td>2,000</td>
+                                                    
                                                     <td>20/03/2022</td>
-                                                    <td>10:00 AM</td>
-                                                    <td>Inside Estate</td>
-                                                    <td>Left Estate <br> 10:30 AM</td>
-                                                    <td>30 Mins</td>
-                                                    <!-- <td><span class="item-border-1">Expired</span> </td> -->
-                                                    <td><span class="item-border"> Running</span></td>
+                                                    
+                                                    <td>1,900</td>
+                                                    
                                                     
                                                     
                                                 </tr>
                                                 <tr>
-                                                    <td>1234567890</td>
-                                                    <td>John Vee</td>
-                                                    <td>08131107261</td>
+                                                    <td> Lekky Estate </td>
+                                                    <td>2,000</td>
+                                                    
                                                     <td>20/03/2022</td>
-                                                    <td>10:00 AM</td>
-                                                    <td>Inside Estate</td>
-                                                    <td>Left Estate <br> 10:30 AM</td>
-                                                    <td>30 Mins</td>
-                                                    <td><span class="item-border-1">Expired</span> </td>
-                                                    <!-- <td><span class="item-border"> Paid</span></td> -->
+                                                    
+                                                    <td>1,900</td>
+                                                    
                                                     
                                                     
                                                 </tr>
@@ -835,7 +805,7 @@ letter-spacing: -0.01em;
                                             </div>
                                         </div>
                                         </div>
-                                    </div>
+                            </div>
 
                                           
 
