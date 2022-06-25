@@ -16,4 +16,4 @@ color: #000000;
 
 
 
-<span class="footer-info">Powered By: </span> <img src="assets/images/footer-balosh.png" width="10%" alt="">
+<span class="footer-info">Powered By: </span> <img src="assets/images/balosh-logo.png" width="15%" alt="">

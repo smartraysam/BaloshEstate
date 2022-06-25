@@ -529,7 +529,7 @@ letter-spacing: -0.01em;
 
 
 
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 push-down">
                                     <div class="card head-body">
                                         <div class="card-header">
                                             Registered Estates

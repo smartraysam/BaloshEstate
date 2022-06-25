@@ -30,7 +30,7 @@
 
             <!-- Start right Content here -->
 
-            <div class="content-page" style="padding-bottom: 2rem;">
+            <div class="content-page" style="padding-bottom: 5rem;">
                 <!-- Start content -->
                 @yield('content')
 

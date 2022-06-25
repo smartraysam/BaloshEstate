@@ -16,7 +16,8 @@
             width: 299px;
             line-height: 28px;
             letter-spacing: -0.01em;
-            background-color: #FF8C2E
+            background-color: #FF8C2E;
+            filter: drop-shadow(0px 8px 12px rgba(135, 145, 233, 0.25));
         }
 
         .col-xl-4 {

@@ -78,6 +78,12 @@ a{
 }
 
 
+.push-down{
+    margin-top: 2rem;
+}
+
+
+
 
 .left .topbar-left {
     background-color: #fff;
@@ -165,6 +171,7 @@ a{
 
 .card-header:first-child {
     border-radius: calc(1.25rem - 1px) calc(1.25rem - 1px) 0 0;
+    box-shadow: 0px 8px 12px rgba(135, 145, 233, 0.25);
 }
 
 .head-body{
@@ -173,6 +180,7 @@ a{
     box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
     margin-bottom: 20px;
     border-radius: 1.25rem;
+    filter: drop-shadow(0px 8px 12px rgba(255, 140, 46, 0.15));
 }
 
 
@@ -195,16 +203,16 @@ letter-spacing: -0.01em;
     border-top-right-radius: .5rem;
     border-bottom-right-radius: .5rem;
     border-top-left-radius: .5rem;
-   
+    box-shadow: 0px 8px 12px rgb(135 145 233 / 25%);
     margin-left: 1rem;
     border-bottom-left-radius: .5rem;
     background-color: #E2ECF9;
     border: none;
     font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 15px;
-line-height: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
 /* identical to box height */
 
 
@@ -219,6 +227,7 @@ color: #000000;
 
 .table-row .card{
     border-radius: 1.25rem;
+    filter: drop-shadow(0px 8px 12px rgba(255, 140, 46, 0.15));
 }
 
 
@@ -240,7 +249,7 @@ table.dataTable {
 
 
 .table-hover tbody tr:hover, .table-striped tbody tr:nth-of-type(odd), .thead-default th {
-    background-color: #F4F6FB;
+    background-color: #FFF6ED;
 }
 
 
@@ -551,8 +560,8 @@ div.dataTables_wrapper div.dataTables_filter {
 
 
 .dt-button{
-    background-color: #E2ECF9;
-    color: #000000;
+    background-color:#FFF6ED;
+    color:  #878787;
     box-shadow: 0px 8px 12px rgba(135, 145, 233, 0.12);
     border-radius: 10px;
     font-family: 'Work Sans';
