@@ -17,10 +17,14 @@ font-size: 20px;
 width: 299px;
 line-height: 28px;
 letter-spacing: -0.01em;
-    background-color: #373392;
+    background-color: #FF8C2E;
 }
 
 
+
+.bg-light {
+    background-color: #FFF6ED !important;
+}
 
 
 
@@ -47,7 +51,7 @@ letter-spacing: -0.01em;
     border-radius: 1.25rem;
     box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
     margin-bottom: 30px;
-    margin-left: 20px;
+   
 }
 
 .card-body-bottom a {
@@ -56,6 +60,9 @@ letter-spacing: -0.01em;
     color: #fff;
     display: block;
 }
+
+
+
 
 
 .app-search a {
@@ -70,10 +77,6 @@ letter-spacing: -0.01em;
     color: #ffffff;
 }
 
-.table > tbody > tr.dashboard-tr > td{
-    padding: 8px 2px;
-    vertical-align: middle;
-}
 
 
 .page-title-box {
@@ -98,7 +101,7 @@ letter-spacing: -0.01em;
     
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background: #373392;
+    background: #FF8C2E;
     color: #fff;
     border: none;
 }
@@ -165,7 +168,7 @@ letter-spacing: -0.01em;
 .btn-primary-power {
     background-color: #242c6d;
     border: none;
-    background: #373392;
+    background: #FF8C2E;
     box-shadow: 0px 8px 12px rgb(135 145 233 / 25%);
     border-radius: 20px;
     
@@ -178,8 +181,10 @@ letter-spacing: -0.01em;
     color: #FFFFFF;
 }
 
-
-
+.table > tbody > tr.admin-list > td {
+    padding: 8px 3px;
+    vertical-align: middle;
+}
 
 @media (max-width: 480px){
 
@@ -193,6 +198,10 @@ letter-spacing: -0.01em;
 .col-12{
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.col-calendar{
+    flex: none;
 }
 
 }
@@ -209,6 +218,10 @@ letter-spacing: -0.01em;
 .col-12{
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.col-calendar{
+    flex: none;
 }
 
 }
@@ -228,7 +241,7 @@ letter-spacing: -0.01em;
     width: inherit;
     line-height: 28px;
     letter-spacing: -0.01em;
-    background-color: #373392;
+    background-color: #FF8C2E;
     
 }
 
@@ -244,6 +257,7 @@ letter-spacing: -0.01em;
     -webkit-box-shadow: 1px 0px 20px rgb(0 0 0 / 5%);
     position: relative;
     display: -ms-flexbox;
+    filter: drop-shadow(0px 8px 12px rgba(255, 140, 46, 0.15));
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -262,9 +276,7 @@ letter-spacing: -0.01em;
     
 }
 
-.dashboard-tr > td{
-    padding: 8px 2px;
-}
+
 
 .summary-above-table {
     text-align: center;
@@ -273,30 +285,165 @@ letter-spacing: -0.01em;
     font-weight: 600;
     font-size: 30px;
     line-height: 38px;
-    color: #373392;
+    color: #FF8C2E;
 }
 
 
 .card-calendar{
     border-radius: 20px;
+    filter: drop-shadow(0px 8px 12px rgba(255, 140, 46, 0.15));
 }
 
 .card-calendar h5{
-    color: #373392;
+    color: #FF8C2E;
     text-align: center;
 }
 
 
 #v-cal .vcal-date--today {
-    background-color: #373392;
+    background-color: #FF8C2E;
 }
 
 #v-cal .vcal-header svg {
-    fill: #373392;
+    fill: #FF8C2E;
+}
+
+
+.form-select {
+    background-image: url(../../assets/images/custom-select.png);
+    background-size: auto;
+}
+
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(.75rem - 3px);
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #54667a;
+    background-color: transparent;
+    /* background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e); */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    box-shadow: unset;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0 .7rem;
 }
 
 
 
+.text-info {
+    --bs-text-opacity: 1;
+    color: #FF8C2E;
+    font-size: 20px;
+    margin: 0 0 0 5rem ;
+}
+
+
+.card-review-table{
+    border-radius: 20px;
+}
+
+
+.fw-normal{
+    font-size: 20px;
+    color: #FF8C2E;
+}
+
+
+.card-review-table h5{
+    color: #FF8C2E;
+}
+
+
+.dashboard-thead th{
+    font-weight: 700;
+}
+
+.bg-success {
+    background-color: #29b348 !important;
+    padding: 0.3rem;
+}
+
+
+.bg-danger {
+    /* background-color: #29b348 !important; */
+    padding: 0.3rem;
+}
+
+
+.card-work-schedule{
+    border-radius: 20px;
+}
+
+
+.cardbody-work-schedule{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    filter: drop-shadow(0px 8px 12px rgba(255, 140, 46, 0.15));
+}
+
+.cardbody-work-schedule h4{
+    font-size: 16px;
+}
+
+.cardbody-work-schedule .py-3{
+    /* border: 1px solid; */
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.cardbody-work-schedule .ms-3{
+    margin-left: 10px;
+   
+}
+
+
+.sch-1{
+    background: #E9EAF4;
+    border-radius: 12px;
+}
+
+.sch-1 h4{
+    color: #4D56A2;
+}
+
+.text-muted-1{
+    color: #737BC1;
+}
+
+.sch-2{
+    background: #FFF9EC;
+    border-radius: 12px;
+}
+
+.sch-2 h4{
+    color: #F0B604;
+}
+
+.text-muted-2{
+    color: #EBC758;
+}
+
+.sch-3{
+
+    background: #FFEEEA;
+    border-radius: 12px;
+}
+
+.sch-3 h4{
+    color: #FD6540;
+}
+
+.text-muted-3{
+    color: #F09C88;
+}
 
 </style>
 
@@ -399,8 +546,7 @@ letter-spacing: -0.01em;
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="page-title-box">
-                                        
-                                        <h4 class="page-title">Dashboard</h4>
+                                        <h4 class="page-title">Admin Dashboard</h4>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -466,7 +612,7 @@ letter-spacing: -0.01em;
                                                    
                                                 </div>
                                                 <div class="card-body-admin-home">
-                                                    <p class="card-link">Maintenance Fee</p>
+                                                    <p class="card-link">Credit (Sold)</p>
                                                 </div>
                                             </div><!--end card-->
                                         </div><!--end col-->
@@ -488,7 +634,7 @@ letter-spacing: -0.01em;
                                     
                                 </div><!--end col-->
 
-                                <div class="col-xl-4">
+                                <div class="col-xl-4 col-calendar">
                                     <div class="card card-calendar">
                                         <div class="card-body">
                                             <h5 class="header-title mt-0 mb-3">Calendar</h5>                                
@@ -530,9 +676,9 @@ letter-spacing: -0.01em;
                             
                     <div class="row">
                         <div class="col-md-12 col-lg-4">
-                            <div class="card">
+                            <div class="card card-review-table">
                                 <div class="d-flex align-items-center p-3">
-                                <h5 class="card-title mb-0">Recent Sales</h5>
+                                <h5 class="card-title mb-0">Revenue Income</h5>
                                 <div class="ms-auto">
                                     <select class="form-select">
                                     <option>March</option>
@@ -558,16 +704,17 @@ letter-spacing: -0.01em;
                                 <div class="table-responsive">
                                     <table class="table mb-0 no-wrap recent-table table-hover">
                                     <thead>
-                                        <tr>
-                                        <th>#</th>
+                                        <tr class="dashboard-thead">
+                                        
                                         <th>Name</th>
-                                        <th>Status</th>
+                                        <th>Service</th>
                                         <th>Date</th>
-                                        <th>Price</th>
+                                        <th>Amount</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="dashboard-tr">
+                                        <tr class="admin-list">
+
                                         
                                         <td class="txt-oflo">Jon Vee</td>
                                         <td>
@@ -580,54 +727,15 @@ letter-spacing: -0.01em;
                                                 bg-success
                                                 label-rouded
                                             "
-                                            >Sale</span
+                                            >Service Fee</span
                                             >
                                         </td>
                                         <td class="txt-oflo">April 18, 2021</td>
-                                        <td><span class="text-success">$24</span></td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
 
-                                        <tr class="dashboard-tr">
-                                        
-                                        <td class="txt-oflo">Jon Vee</td>
-                                        <td>
-                                            <span
-                                            class="
-                                                badge
-                                                rounded-pill
-                                                text-white
-                                                font-weight-medium
-                                                bg-info
-                                                label-rouded
-                                            "
-                                            >Extended</span
-                                            >
-                                        </td>
-                                        <td class="txt-oflo">April 19, 2021</td>
-                                        <td><span class="text-info">$1250</span></td>
-                                        </tr>
+                                        <tr class="admin-list">
 
-                                        <tr class="dashboard-tr">
-                                        
-                                        <td class="txt-oflo">Jon Vee</td>
-                                        <td>
-                                            <span
-                                            class="
-                                                badge
-                                                rounded-pill
-                                                text-white
-                                                font-weight-medium
-                                                bg-info
-                                                label-rouded
-                                            "
-                                            >Extended</span
-                                            >
-                                        </td>
-                                        <td class="txt-oflo">April 19, 2021</td>
-                                        <td><span class="text-info">$1250</span></td>
-                                        </tr>
-
-                                        <tr class="dashboard-tr">
                                         
                                         <td class="txt-oflo">Jon Vee</td>
                                         <td>
@@ -640,15 +748,16 @@ letter-spacing: -0.01em;
                                                 bg-success
                                                 label-rouded
                                             "
-                                            >Sale</span
+                                            >Service Fee</span
                                             >
                                         </td>
-                                        <td class="txt-oflo">April 23, 2021</td>
-                                        <td><span class="text-danger">-$14</span></td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
-                                        <tr>
-                                        <td>7</td>
-                                        <td class="txt-oflo">Helping Hands WP Theme</td>
+
+                                        <tr class="admin-list">
+                                        
+                                        <td class="txt-oflo">Jon Vee</td>
                                         <td>
                                             <span
                                             class="
@@ -656,15 +765,38 @@ letter-spacing: -0.01em;
                                                 rounded-pill
                                                 text-white
                                                 font-weight-medium
-                                                bg-warning
+                                                bg-success
                                                 label-rouded
                                             "
-                                            >Member</span
+                                            >Service Fee</span
                                             >
                                         </td>
-                                        <td class="txt-oflo">April 22, 2021</td>
-                                        <td><span class="text-success">$64</span></td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
+                                        <tr class="admin-list">
+                       
+                                        <td class="txt-oflo">Jon Vee</td>
+                                        <td>
+                                            <span
+                                            class="
+                                                badge
+                                                rounded-pill
+                                                text-white
+                                                font-weight-medium
+                                                bg-success
+                                                label-rouded
+                                            "
+                                            >Service Fee</span
+                                            >
+                                        </td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
+                                        </tr>
+
+                                        
+                                        
+                                        
                                     </tbody>
                                     </table>
                                 </div>
@@ -673,7 +805,7 @@ letter-spacing: -0.01em;
                         </div>
 
                         <div class="col-md-12 col-lg-4">
-                            <div class="card">
+                            <div class="card card-review-table">
                                 <div class="d-flex align-items-center p-3">
                                 <h5 class="card-title mb-0">Recent Sales</h5>
                                 <div class="ms-auto">
@@ -701,77 +833,17 @@ letter-spacing: -0.01em;
                                 <div class="table-responsive">
                                     <table class="table mb-0 no-wrap recent-table table-hover">
                                     <thead>
-                                        <tr>
-                                        <th>#</th>
+                                        <tr class="dashboard-thead">
+                                        
                                         <th>Name</th>
-                                        <th>Status</th>
+                                        <th>Service</th>
                                         <th>Date</th>
-                                        <th>Price</th>
+                                        <th>Amount</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="dashboard-tr">
-                                        
-                                        <td class="txt-oflo">Jon Vee</td>
-                                        <td>
-                                            <span
-                                            class="
-                                                badge
-                                                rounded-pill
-                                                text-white
-                                                font-weight-medium
-                                                bg-success
-                                                label-rouded
-                                            "
-                                            >Power Purchase</span
-                                            >
-                                        </td>
-                                        <td class="txt-oflo">April 18, 2021</td>
-                                        <td><span class="text-success">$24</span></td>
-                                        </tr>
+                                    <tr class="admin-list">
 
-                                        <tr class="dashboard-tr">
-                                        
-                                        <td class="txt-oflo">Jon Vee</td>
-                                        <td>
-                                            <span
-                                            class="
-                                                badge
-                                                rounded-pill
-                                                text-white
-                                                font-weight-medium
-                                                bg-info
-                                                label-rouded
-                                            "
-                                            >Extended</span
-                                            >
-                                        </td>
-                                        <td class="txt-oflo">April 18, 2021</td>
-                                        <td><span class="text-success">&#8358;20,000</span></td>
-                                        </tr >
-
-
-                                        <tr class="dashboard-tr">
-                                        
-                                        <td class="txt-oflo">Jon Vee</td>
-                                        <td>
-                                            <span
-                                            class="
-                                                badge
-                                                rounded-pill
-                                                text-white
-                                                font-weight-medium
-                                                bg-info
-                                                label-rouded
-                                            "
-                                            >Extended</span
-                                            >
-                                        </td>
-                                        <td class="txt-oflo">April 19, 2021</td>
-                                        <td><span class="text-info">$1250</span></td>
-                                        </tr>
-
-                                        <tr class="dashboard-tr">
                                         
                                         <td class="txt-oflo">Jon Vee</td>
                                         <td>
@@ -784,15 +856,18 @@ letter-spacing: -0.01em;
                                                 bg-danger
                                                 label-rouded
                                             "
-                                            >Tax</span
+                                            >Power Purchase</span
+
                                             >
                                         </td>
-                                        <td class="txt-oflo">April 20, 2021</td>
-                                        <td><span class="text-danger">-$24</span></td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
-                                        <tr>
-                                        <td>5</td>
-                                        <td class="txt-oflo">Hosting press html</td>
+
+                                        <tr class="admin-list">
+
+                                        
+                                        <td class="txt-oflo">Jon Vee</td>
                                         <td>
                                             <span
                                             class="
@@ -800,18 +875,20 @@ letter-spacing: -0.01em;
                                                 rounded-pill
                                                 text-white
                                                 font-weight-medium
-                                                bg-warning
+                                                bg-danger
                                                 label-rouded
                                             "
-                                            >Sale</span
+                                            >Power Purchase</span
                                             >
                                         </td>
-                                        <td class="txt-oflo">April 21, 2021</td>
-                                        <td><span class="text-success">$24</span></td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
-                                        <tr>
-                                        <td>6</td>
-                                        <td class="txt-oflo">Digital Agency PSD</td>
+
+                                        <tr class="admin-list">
+
+                                        
+                                        <td class="txt-oflo">Jon Vee</td>
                                         <td>
                                             <span
                                             class="
@@ -819,18 +896,19 @@ letter-spacing: -0.01em;
                                                 rounded-pill
                                                 text-white
                                                 font-weight-medium
-                                                bg-success
+                                                bg-danger
                                                 label-rouded
                                             "
-                                            >Sale</span
+                                            >Power Purchase</span
                                             >
                                         </td>
-                                        <td class="txt-oflo">April 23, 2021</td>
-                                        <td><span class="text-danger">-$14</span></td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
-                                        <tr>
-                                        <td>7</td>
-                                        <td class="txt-oflo">Helping Hands WP Theme</td>
+
+                                        <tr class="admin-list">
+               
+                                        <td class="txt-oflo">Jon Vee</td>
                                         <td>
                                             <span
                                             class="
@@ -838,15 +916,19 @@ letter-spacing: -0.01em;
                                                 rounded-pill
                                                 text-white
                                                 font-weight-medium
-                                                bg-warning
+                                                bg-danger
                                                 label-rouded
                                             "
-                                            >Member</span
+                                            >Power Purchase</span
                                             >
                                         </td>
-                                        <td class="txt-oflo">April 22, 2021</td>
-                                        <td><span class="text-success">$64</span></td>
+                                        <td class="txt-oflo">April 18, 2021</td>
+                                        <td><span class="text-success">&#8358;20,000</span></td>
                                         </tr>
+
+                                        
+
+                                        
                                     </tbody>
                                     </table>
                                 </div>
@@ -854,76 +936,59 @@ letter-spacing: -0.01em;
                             </div>
                         </div>
 
-                        <div class="d-flex align-items-stretch col-md-12 col-lg-4">
-              <div class="card w-100">
-                <div class="p-4 border-bottom">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h4 class="mb-0 card-title">Total Earnings</h4>
-                    </div>
-                    <div class="ms-auto">
-                      <select class="form-select">
-                        <option>January 2021</option>
-                        <option>February 2021</option>
-                        <option>March 2021</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body bg-light">
-                  <div class="d-flex align-items-center py-3">
-                    <img
-                      src="https://demos.wrappixel.com/premium-admin-templates/bootstrap/ample-bootstrap/package/assets/images/users/1.jpg"
-                      class="rounded-circle"
-                      width="60"
-                    />
-                    <div class="ms-3">
-                      <h4 class="font-weight-medium mb-0">Andrew Simon</h4>
-                      <span class="text-muted">10-11-2021</span>
-                    </div>
-                    <div class="ms-auto">
-                      <h2 class="mb-0 text-info font-weight-medium">$46</h2>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center py-3">
-                    <img
-                      src="https://demos.wrappixel.com/premium-admin-templates/bootstrap/ample-bootstrap/package/assets/images/users/2.jpg"
-                      class="rounded-circle"
-                      width="60"
-                    />
-                    <div class="ms-3">
-                      <h4 class="font-weight-medium mb-0">John Deo</h4>
-                      <span class="text-muted">01-11-2021</span>
-                    </div>
-                    <div class="ms-auto">
-                      <h2 class="mb-0 text-info font-weight-medium">$56</h2>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center py-3">
-                    <img
-                      src="https://demos.wrappixel.com/premium-admin-templates/bootstrap/ample-bootstrap/package/assets/images/users/3.jpg"
-                      class="rounded-circle"
-                      width="60"
-                    />
-                    <div class="ms-3">
-                      <h4 class="font-weight-medium mb-0">Shaina Nehwal</h4>
-                      <span class="text-muted">26-03-2021</span>
-                    </div>
-                    <div class="ms-auto">
-                      <h2 class="mb-0 text-info font-weight-medium">$78</h2>
-                    </div>
-                  </div>
-                  <div class="pt-3">
-                    <button
-                      type="button"
-                      class="btn btn-info text-white btn-rounded d-block w-100"
-                    >
-                      Withdrow Money
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                            <div class="d-flex align-items-stretch col-md-12 col-lg-4">
+                                <div class="card w-100 card-work-schedule">
+                                    <div class="p-4 border-bottom">
+                                    <div class="d-flex align-items-center">
+                                        <div style="text-align:center ;">
+                                        <h4 class="mb-0 card-title">Work Schedules</h4>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                    <div class="card-body cardbody-work-schedule">
+                                    <div class="d-flex align-items-center py-3 sch-1">
+                                        <img
+                                        src="https://demos.wrappixel.com/premium-admin-templates/bootstrap/ample-bootstrap/package/assets/images/users/2.jpg"
+                                        class="rounded-circle"
+                                        width="40"
+                                        />
+                                        <div class="ms-3">
+                                        <h4 class="font-weight-medium mb-0 ">Send meeting notifications</h4>
+                                        <span class="text-muted-1">07:30 - 08:15</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-flex align-items-center py-3 sch-2">
+                                        <img
+                                        src="https://demos.wrappixel.com/premium-admin-templates/bootstrap/ample-bootstrap/package/assets/images/users/2.jpg"
+                                        class="rounded-circle"
+                                        width="40"
+                                        />
+                                        <div class="ms-3">
+                                        <h4 class="font-weight-medium mb-0">General Maintenance</h4>
+                                        <span class=" text-muted-2">07:30 - 08:15</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-flex align-items-center py-3 sch-3">
+                                        <img
+                                        src="https://demos.wrappixel.com/premium-admin-templates/bootstrap/ample-bootstrap/package/assets/images/users/2.jpg"
+                                        class="rounded-circle"
+                                        width="40"
+                                        />
+                                        <div class="ms-3">
+                                        <h4 class="font-weight-medium mb-0">Send last meeting minutes</h4>
+                                        <span class="text-muted-3">07:30 - 08:15</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="pt-3">
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
 
                             
                     </div>
