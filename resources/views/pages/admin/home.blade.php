@@ -182,7 +182,7 @@ letter-spacing: -0.01em;
 }
 
 .table > tbody > tr.admin-list > td {
-    padding: 8px 3px;
+    padding: 8px 2.5px;
     vertical-align: middle;
 }
 
@@ -339,7 +339,7 @@ letter-spacing: -0.01em;
 
 .text-info {
     --bs-text-opacity: 1;
-    color: #FF8C2E;
+    color: #878787 !important;
     font-size: 20px;
     margin: 0 0 0 5rem ;
 }
@@ -352,7 +352,7 @@ letter-spacing: -0.01em;
 
 .fw-normal{
     font-size: 20px;
-    color: #FF8C2E;
+    color: #878787 !important;
 }
 
 
